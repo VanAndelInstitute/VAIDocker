@@ -5,6 +5,7 @@ services:
   centos:
     container_name: centos_bbc
     network_mode: host
+    privileged: false
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -14,6 +15,7 @@ services:
       - /etc/krb5.conf:/etc/krb5.conf
       - /etc/pam.d:/etc/pam.d
       - /var/lib/sss/pipes:/var/lib/sss/pipes
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
 
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
