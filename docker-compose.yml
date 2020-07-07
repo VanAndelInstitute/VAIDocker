@@ -1,0 +1,30 @@
+version: '3.1'
+
+services:
+
+  centos:
+    container_name: centos_bbc
+    network_mode: host
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      # Authentication we use SSSD.
+      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf
+      - /etc/pam.d:/etc/pam.d
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+
+      # Authentication cannot mount individual files, because the mapping is
+      # based on the inode
+      - /host/data:/data
+
+      - /primary/projects/bbc:/primary/projects/bbc:ro
+      - /secondary/projects/bbc:/secondary/projects/bbc:ro
+      - /primary/vari/software:/primary/vari/software/:ro
+      - /cm/shared/modulefiles:/cm/shared/modulefiles:ro
+
+    ports:
+      - 22000-22100:22000-22100
+
+    restart: always
