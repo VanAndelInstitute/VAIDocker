@@ -4,6 +4,7 @@ services:
 
   centos:
     container_name: centos_bbc
+    hostname: bbcdockernode
     network_mode: host
     privileged: false
     build:
