@@ -3,13 +3,14 @@ version: '3.1'
 services:
 
   centos:
-    container_name: centos_bbc
+    container_name: centos_bbcv3
     hostname: bbcdockernode
     network_mode: host
     privileged: false
     cap_add:
       - SYS_ADMIN
-    image: vaibbc/centos8_rstudio
+      - DAC_READ_SEARCH
+    image: vaibbc/centos8_rstudio:3
     volumes:
       # Authentication we use SSSD.
       - /var/run/nscd/socket:/var/run/nscd/socket
