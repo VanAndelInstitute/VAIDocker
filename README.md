@@ -82,6 +82,5 @@ docker build -t $USER/${appname}:${disttag} .
 
 ## Notes
 
-Known issues:
-
- * None at this time.
+# To run centos8 systemd, you need to start as follows:
+docker run --privileged --name test -v /sys/fs/cgroup:/sys/fs/cgroup:ro -d vanandelinstitute/systemdcentos
