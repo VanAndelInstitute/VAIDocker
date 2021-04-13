@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+
+  centos:
+    container_name: vai_sshd
+    hostname: vainode
+    network_mode: host
+    privileged: false
+#    used for allowing cifs mounts within countainer
+#    cap_add:
+#      - SYS_ADMIN
+#      - DAC_READ_SEARCH
+    image: vanandelinstitute/oracle8systemd_sshd
+    volumes:
+      # Authentication we use SSSD.
+      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf
+      - /etc/pam.d:/etc/pam.d
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+      # Authentication cannot mount individual files, because the mapping is
+      # based on the inode
+      - /host/data:/data
+
+      - /varidata/research:/varidata/research:ro
+      - /varidata/researchtemp:/varidata/researchtemp:ro
+    tmpfs:
+      - /run
+      - /run/lock
+      - /tmp
+    ports:
+      - 22100:22100
+
+    restart: always
