@@ -5,7 +5,7 @@ services:
   centos:
     container_name: centos_jang
     hostname: jangdockernode
-    network_mode: host
+    network_mode: bridge
     privileged: false
     cap_add:
       - SYS_ADMIN
@@ -21,7 +21,7 @@ services:
 
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
-      - /host/data:/data
+      - /data/data:/data
 
       - /varidata/research/projects/jones/projects/JJANG:/varidata/research/projects/jones/projects/JJANG:ro
       - /varidata/research/software:/varidata/research/software/:ro
