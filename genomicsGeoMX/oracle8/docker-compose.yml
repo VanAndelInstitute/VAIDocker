@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+
+  centos:
+    container_name: genomics_geomx
+    hostname: genomicsgeomx
+    network_mode: host
+    privileged: false
+#    used for allowing cifs mounts within countainer
+#    cap_add:
+#      - SYS_ADMIN
+#      - DAC_READ_SEARCH
+    image: vanandelinstitute/genomics_geomx
+    volumes:
+      # Authentication we use SSSD.
+      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf
+      - /etc/pam.d:/etc/pam.d
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+      # Authentication cannot mount individual files, because the mapping is
+      # based on the inode
+
+      - /varidata/research/instruments/sequencing:/varidata/research/instruments/sequencing:rw
+      - /varidata/research/software/GeoMxNGSPipeline/Linux_2.3.3.10/:/var/GeoMxNGSPipeline:rw
+      - /tmp:/var/tmp:rw
+    tmpfs:
+      - /run
+      - /run/lock
+      - /tmp
+    ports:
+      - 22100:22100
+      - 5000:5000
+
+    restart: always
