@@ -23,7 +23,10 @@ services:
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
 
+      - /varidata/research/projects/genomicscore:/varidata/research/projects/genomicscore:rw
+      - /varidata/research/projects/genomicscore:/genomicscore:rw
       - /varidata/research/instruments/sequencing:/varidata/research/instruments/sequencing:rw
+      - /varidata/research/instruments/sequencing:/sequencing:rw
       - /varidata/research/software/GeoMxNGSPipeline/Linux_2.3.3.10/:/var/GeoMxNGSPipeline:rw
       - /tmp:/var/tmp:rw
     tmpfs:
