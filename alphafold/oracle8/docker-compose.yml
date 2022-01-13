@@ -11,7 +11,7 @@ services:
 #    cap_add:
 #      - SYS_ADMIN
 #      - DAC_READ_SEARCH
-    image: vanandelinstitute/oracle8systemd_sshd
+    image: vanandelinstitute/alphafold
     volumes:
       # Authentication we use SSSD.
       - /var/run/nscd/socket:/var/run/nscd/socket
