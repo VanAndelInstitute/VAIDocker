@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+
+  centos:
+    container_name: hpc-compute
+    hostname: compute
+    network_mode: host
+    privileged: true
+    image: vanandelinstitute/hpcnode
+    volumes:
+      # Authentication we use SSSD.
+      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf
+      - /etc/pam.d:/etc/pam.d
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+      # data
+      - /varidata:/varidata:rw
+      - /legacy:/legacy:rw
+      - /primary:/primary:rw
+      - /secondary:/secondary:rw
+      - /tmp:/var/tmp:rw
+      - /varidata/research/home:/home:rw
+      - /etc/hosts:/etc/hosts:ro
+
+    tmpfs:
+      - /run
+      - /run/lock
+      - /tmp
+   
+    restart: always
