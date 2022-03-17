@@ -1,9 +1,13 @@
 FROM oraclelinux:8
 
 ENV container docker
-MAINTAINER zack ramjan <>
+LABEL maintainer="zack ramjan"
 
-RUN yum update -y && yum install -y oracle-epel-release-el8
+RUN yum update -y && \
+yum install -y oracle-epel-release-el8 && \
+yum groupinstall -y 'Development Tools' && \
+yum install -y openssl-devel libuuid-devel libseccomp-devel wget squashfs-tools vim curl unzip wget sssd-client \
+openssh-server sudo singularity golang git lftp python3 python tmux slurm-pam_slurm slurm-slurmd slurm-torque
 
 # install systemd
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
@@ -17,16 +21,9 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 #set up ssh
 COPY startservices.sh /root/startservices.sh
-
-RUN yum install -y vim curl unzip wget sssd-client openssh-server sudo && \
-    echo Port 22100 >> /etc/ssh/sshd_config && \
+RUN echo Port 22100 >> /etc/ssh/sshd_config && \
     chmod +x /root/startservices.sh 
 
-
-#install go
-
-
-#install singularity
 
 
 #install nvidia
