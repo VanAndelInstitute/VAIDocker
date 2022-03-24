@@ -22,9 +22,12 @@ services:
       - /primary:/primary:rw
       - /secondary:/secondary:rw
       - /tmp:/var/tmp:rw
+      - /tmp:/data:rw
       - /varidata/research/home:/home:rw
       - /etc/hosts:/etc/hosts:ro
-
+      - /varidata/research/clustermgmt/shared-ha:/cm/shared:ro
+      - /cm/local:/cm/local
+      
     tmpfs:
       - /run
       - /run/lock
