@@ -25,7 +25,8 @@ COPY startservices.sh /root/startservices.sh
 RUN echo Port 22100 >> /etc/ssh/sshd_config && \
     chmod +x /root/startservices.sh 
 
-
+#set up module env
+COPY /varidata/research/software/modules/hpc/modules.sh /etc/profile.d
 
 #install nvidia
 
