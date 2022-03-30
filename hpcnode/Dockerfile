@@ -8,7 +8,7 @@ yum install -y oracle-epel-release-el8 yum-utils && \
 yum groupinstall -y 'Development Tools' && \
 dnf config-manager --set-enabled ol8_codeready_builder && \
 yum install -y openssl-devel libuuid-devel libseccomp-devel wget squashfs-tools vim curl unzip wget sssd-client \
-openssh-server sudo singularity golang git lftp python3 python2 tmux slurm-pam_slurm slurm-slurmd slurm-torque
+openssh-server sudo singularity golang git lftp python3 python2 tmux environment-modules slurm-pam_slurm slurm-slurmd slurm-torque
 
 # install systemd
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
@@ -26,7 +26,8 @@ RUN echo Port 22100 >> /etc/ssh/sshd_config && \
     chmod +x /root/startservices.sh 
 
 #set up module env
-COPY modules.sh /etc/profile.d/
+RUN echo export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles > /etc/profile.d/modules.sh && \
+echo source /usr/share/Modules/init/bash >> /etc/profile.d/modules.sh
 
 #install nvidia
 

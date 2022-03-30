@@ -7,7 +7,8 @@ services:
     hostname: compute
     network_mode: host
     privileged: true
-    image: vanandelinstitute/hpcnode
+    build: ./
+
     volumes:
       # Authentication we use SSSD.
       - /var/run/nscd/socket:/var/run/nscd/socket
