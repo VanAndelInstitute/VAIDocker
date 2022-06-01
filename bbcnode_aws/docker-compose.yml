@@ -3,8 +3,8 @@ version: '3.1'
 services:
 
   centos:
-    container_name: centos_bbcv3
-    hostname: bbcdockernode
+    container_name: rstudio_bbc
+    hostname: rstudio_bbc
     network_mode: bridge 
     privileged: false
     cap_add:
