@@ -10,7 +10,7 @@ services:
     cap_add:
       - SYS_ADMIN
       - DAC_READ_SEARCH
-    image: vaibbc/centos8_rstudio:4
+    image: vaibbc/centos8_rstudio:6
     volumes:
       # Authentication we use SSSD.
       #- /var/run/nscd/socket:/var/run/nscd/socket
