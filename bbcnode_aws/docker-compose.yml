@@ -5,22 +5,26 @@ services:
   centos:
     container_name: centos_bbcv3
     hostname: bbcdockernode
-    network_mode: host
+    network_mode: bridge 
     privileged: false
+    cap_add:
+      - SYS_ADMIN
+      - DAC_READ_SEARCH
     image: vaibbc/centos8_rstudio:4
     volumes:
       # Authentication we use SSSD.
-      - /var/run/nscd/socket:/var/run/nscd/socket
+      #- /var/run/nscd/socket:/var/run/nscd/socket
       - /etc/krb5.conf:/etc/krb5.conf
-      - /etc/pam.d:/etc/pam.d
-      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      #- /etc/pam.d:/etc/pam.d
+      #- /var/lib/sss/pipes:/var/lib/sss/pipes
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
       - /home/ec2-user/studies:/data/studies
+      - /home/ec2-user:/home/ec2-user
 
     ports:
-      - 22000-22100:22000-22100
+      - 80:22099
 
     restart: always
