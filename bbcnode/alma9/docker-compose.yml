@@ -5,7 +5,7 @@ services:
   alma9:
     container_name: rstudio_alma9
     hostname: rstudio
-    network_mode: host
+    network_mode: bridge
     privileged: false
     cap_add:
       - SYS_ADMIN
