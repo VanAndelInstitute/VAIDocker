@@ -13,11 +13,11 @@ docker exec rstudio_bbc cp /etc/pam.d/login /etc/pam.d/rstudio
 docker exec rstudio_bbc systemctl start systemd-user-sessions
 
 #WITHIN CONTAINER
-sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
-sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-yum install passwd
-cp /etc/pam.d/login /etc/pam.d/rstudio
-useradd ec2-user
-passwd ec2-user
-systemctl start systemd-user-sessions
+#sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+#sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+#yum install passwd
+#cp /etc/pam.d/login /etc/pam.d/rstudio
+#useradd ec2-user
+#passwd ec2-user
+#systemctl start systemd-user-sessions
 
