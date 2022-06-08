@@ -6,7 +6,7 @@ chmod +x /usr/bin/docker-compose
 cd /root
 git clone https://github.com/VanAndelInstitute/VAIDocker.git
 cd /root/VAIDocker/bbcnode_aws
-#docker login
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 639677452477.dkr.ecr.us-east-2.amazonaws.com
 docker-compose up -d
 sleep 5
 docker exec rstudio_bbc cp /etc/pam.d/login /etc/pam.d/rstudio
