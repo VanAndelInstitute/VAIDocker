@@ -6,7 +6,7 @@ chmod +x /usr/bin/docker-compose
 cd /root
 git clone https://github.com/VanAndelInstitute/VAIDocker.git
 cd /root/VAIDocker/bbcnode_aws
-docker login
+#docker login
 docker-compose up -d
 sleep 5
 docker exec rstudio_bbc cp /etc/pam.d/login /etc/pam.d/rstudio
