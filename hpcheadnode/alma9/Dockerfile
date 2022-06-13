@@ -17,6 +17,8 @@ RUN echo export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles > /etc/p
 echo source /usr/share/Modules/init/bash >> /etc/profile.d/modules.sh
 
 #install nvidia
+COPY installSlurm.sh /root
+RUN bash /root/installSlurm.sh
 
 
 VOLUME [ "/sys/fs/cgroup" ]
