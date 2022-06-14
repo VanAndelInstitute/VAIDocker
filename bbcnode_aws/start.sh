@@ -30,7 +30,7 @@ docker exec rstudio_bbc systemctl start systemd-user-sessions
 echo `curl ifconfig.me`.nip.io { > /root/Caddyfile
 echo "   reverse_proxy localhost:8080" >> /root/Caddyfile
 echo } >> /root/Caddyfile
-docker run -d --network host -v /root/Caddyfile:/etc/caddy/Caddyfile caddy
+docker run -d --name caddy --network host -v /root/Caddyfile:/etc/caddy/Caddyfile caddy
 
 
 
