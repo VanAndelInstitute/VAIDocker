@@ -15,6 +15,7 @@ cd /root/VAIDocker/bbcnode_aws
 #copy the script to handle reboots or starts and stops
 cp bounce.sh /var/lib/cloud/scripts/per-boot
 chmod +x /var/lib/cloud/scripts/per-boot/bounce.sh
+su - ec2-user -c "echo mounting studies"
 
 #fire up the container
 aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 639677452477.dkr.ecr.us-east-2.amazonaws.com
