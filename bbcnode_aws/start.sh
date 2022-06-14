@@ -25,6 +25,15 @@ sleep 5
 docker exec rstudio_bbc cp /etc/pam.d/login /etc/pam.d/rstudio
 docker exec rstudio_bbc systemctl start systemd-user-sessions
 
+
+#set up the cert and proxy
+echo `curl ifconfig.me`.nip.io { > /root/Caddyfile
+echo "   reverse_proxy localhost:8080" >> /root/Caddyfile
+echo } >> /root/Caddyfile
+docker run -d --network host -v /root/Caddyfile:/etc/caddy/Caddyfile caddy
+
+
+
 #WITHIN CONTAINER (NOT USED)
 #sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 #sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
