@@ -25,6 +25,6 @@ services:
       - /home/ec2-user:/home/ec2-user
 
     ports:
-      - 80:22099
+      - 8080:22099
 
     restart: always
