@@ -13,5 +13,8 @@
  cd contribs/pam
  make install
  cd ../..
+ cd contribs/perlapi
+ make install
+ cd ../..
  cd etc
  cp *.service /etc/systemd/system
