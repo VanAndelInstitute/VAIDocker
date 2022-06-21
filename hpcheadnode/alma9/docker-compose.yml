@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
 
-  :
+  hpc:
     container_name: hpc-headnode
     hostname: compute
     network_mode: host
