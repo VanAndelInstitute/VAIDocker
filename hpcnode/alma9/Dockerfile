@@ -17,7 +17,8 @@ bind-utils
 RUN echo export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles > /etc/profile.d/modules.sh && \
 echo source /usr/share/Modules/init/bash >> /etc/profile.d/modules.sh
 
-#install nvidia
+#install slurm
+COPY startservices.sh /root
 COPY installSlurm.sh /root
 RUN bash /root/installSlurm.sh
 
