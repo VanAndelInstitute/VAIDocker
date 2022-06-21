@@ -14,5 +14,5 @@ myHost=`cat /etc/hosts | grep $myIP | awk '{print $2}'`
 hostname $myHost
 
 #SLURMCTLD
-cp /cm/shared/vaihpc/slurm/etc/* /etc/slurm/
+cp /cm/shared/vaihpc/slurm/etc/* /usr/local/etc/
 systemctl start	slurmctld

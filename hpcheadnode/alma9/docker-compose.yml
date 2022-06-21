@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
 
-  hpc:
+  :
     container_name: hpc-headnode
     hostname: compute
     network_mode: host
@@ -26,7 +26,7 @@ services:
       - /tmp:/data:rw
       - /varidata/research/home:/home:rw
       - /etc/hosts:/etc/hosts:ro
-      - /varidata/research/clustermgmt/shared-ha:/cm/shared:ro
+      - /varidata/research/clustermgmt/shared-ha:/cm/shared:rw
       - /cm/local:/cm/local
       
     tmpfs:
