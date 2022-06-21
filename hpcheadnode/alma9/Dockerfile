@@ -4,7 +4,7 @@ ENV container docker
 LABEL maintainer="zack ramjan"
 
 RUN yum update -y && \
-yum install yum-utils && \
+yum install -y yum-utils && \
 yum groupinstall -y 'Development Tools' && \
 dnf config-manager --set-enabled crb && \
 yum install -y --allowerasing curl libcurl libcurl-devel && \
