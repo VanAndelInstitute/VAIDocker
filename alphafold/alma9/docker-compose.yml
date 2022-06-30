@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+
+  hpc:
+    container_name: hpc-compute
+    hostname: compute
+    network_mode: bridge
+    privileged: true
+    build: ./
+
+    volumes:
+      # Authentication we use SSSD.
+      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf
+      - /etc/pam.d:/etc/pam.d
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+      # data
+      - /varidata:/varidata:rw
+      - /legacy:/legacy:rw
+      - /primary:/primary:rw
+      - /secondary:/secondary:rw
+      - /tmp:/var/tmp:rw
+      - /tmp:/data:rw
+      - /varidata/research/home:/home:rw
+      - /etc/hosts:/etc/hosts:ro
+      - /varidata/research/clustermgmt/shared-ha:/cm/shared:rw
+      - /cm/local:/cm/local
+
+    #https://stackoverflow.com/questions/37379033/docker-compose-service-listen-on-specified-interface
+    ports:
+      - 10.152.220.222:22:22100
+      
+    tmpfs:
+      - /run
+      - /run/lock
+      - /tmp
+   
+    restart: always
