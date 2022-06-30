@@ -21,7 +21,7 @@ services:
 
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
-      - /host/data:/data
+      - /data/data:/data
 
       - /primary/projects/bbc:/primary/projects/bbc:ro
       - /secondary/projects/bbc:/secondary/projects/bbc:ro
@@ -29,6 +29,6 @@ services:
       - /cm/shared/modulefiles:/cm/shared/modulefiles:ro
 
     ports:
-      - 22300-22400:22000-22100
+      - 22000-22100:22000-22100
 
     restart: always
