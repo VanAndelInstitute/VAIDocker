@@ -10,7 +10,9 @@ services:
     cap_add:
       - SYS_ADMIN
       - DAC_READ_SEARCH
-    image: vanandelinstitute/alma9sshd
+    environment:
+      - TZ=America/Detroit
+    image: vaibbc/rstudio:R4.2
     volumes:
       # Authentication we use SSSD.
       - /var/run/nscd/socket:/var/run/nscd/socket
@@ -27,6 +29,10 @@ services:
       - /secondary/projects/bbc:/secondary/projects/bbc:ro
       - /primary/vari/software:/primary/vari/software/:ro
       - /cm/shared/modulefiles:/cm/shared/modulefiles:ro
+      
+      # TIMEZONE
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
     ports:
       - 22000-22100:22000-22100
