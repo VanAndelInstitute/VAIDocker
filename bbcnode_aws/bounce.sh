@@ -24,5 +24,5 @@ PASSWORD=`aws ssm get-parameter --name "/rstudio/user/sc-environments/ec2-instan
 MYIP=`curl ifconfig.me 2> /dev/null`
 echo "You can log into RSTUDIO SERVER at the following URL:" > /etc/motd
 echo  https://$MYIP.nip.io  >> /etc/motd
-echo  username: ec2-user      password: $PASSWORD  >> /etc/motd
+echo  username: ec2-user  >> /etc/motd
 echo  password: $PASSWORD  >> /etc/motd
