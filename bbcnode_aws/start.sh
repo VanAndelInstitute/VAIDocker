@@ -43,7 +43,7 @@ echo $PASSWORD | passwd --stdin ec2-user
 #set password inside container as well
 docker cp /etc/pam.d/passwd rstudio_bbc:/etc/pam.d/
 docker exec rstudio_bbcc chmod 600 /etc/shadow
-docker exec rstudio_bbc bash -l -c "$PASSWORD hello2 |  passwd --stdin ec2-user"
+docker exec rstudio_bbc bash -l -c "echo $PASSWORD |  passwd --stdin ec2-user"
 
 MYIP=`curl -s ifconfig.me 2> /dev/null`
 rm -f /etc/motd
