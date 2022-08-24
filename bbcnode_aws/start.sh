@@ -47,12 +47,20 @@ docker exec rstudio_bbc bash -l -c "echo $PASSWORD |  passwd --stdin ec2-user"
 
 MYIP=`curl -s ifconfig.me 2> /dev/null`
 rm -f /etc/motd
-echo "#######################################################"
-echo "You can log into RSTUDIO SERVER at the following URL:" > /etc/motd
+echo > /etc/motd
+echo >> /etc/motd
+echo >> /etc/motd
+echo >> /etc/motd
+echo "#######################################################" >> /etc/motd
+echo "You can log into RSTUDIO SERVER at the following URL:" >> /etc/motd
 echo  https://$MYIP.nip.io  >> /etc/motd
 echo  username: ec2-user   >> /etc/motd
 echo  password: $PASSWORD  >> /etc/motd
-echo "#######################################################"
+echo "#######################################################" >> /etc/motd
+echo >> /etc/motd
+echo >> /etc/motd
+echo >> /etc/motd
+echo >> /etc/motd
 
 
 #WITHIN CONTAINER (NOT USED)
