@@ -40,6 +40,9 @@ instance_region=$(curl -s "http://169.254.169.254/latest/meta-data/placement/reg
 aws ssm put-parameter --name "/rstudio/user/sc-environments/ec2-instance/${instance_id}" --value $PASSWORD --region $instance_region --type SecureString --no-overwrite 2> /dev/null
 PASSWORD=`aws ssm get-parameter --name "/rstudio/user/sc-environments/ec2-instance/${instance_id}"  --region $instance_region --with-decryption --output text | cut -f 7`
 echo $PASSWORD | passwd --stdin ec2-user
+#set password inside container as well
+echo $PASSWORD | docker exec rstudio_bbc passwd --stdin ec2-user
+
 MYIP=`curl -s ifconfig.me 2> /dev/null`
 rm -f /etc/motd
 echo "#######################################################"
