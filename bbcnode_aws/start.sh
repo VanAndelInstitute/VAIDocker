@@ -42,10 +42,13 @@ PASSWORD=`aws ssm get-parameter --name "/rstudio/user/sc-environments/ec2-instan
 echo $PASSWORD | passwd --stdin ec2-user
 MYIP=`curl -s ifconfig.me 2> /dev/null`
 rm -f /etc/motd
+echo "#######################################################"
 echo "You can log into RSTUDIO SERVER at the following URL:" > /etc/motd
 echo  https://$MYIP.nip.io  >> /etc/motd
 echo  username: ec2-user   >> /etc/motd
 echo  password: $PASSWORD  >> /etc/motd
+echo "#######################################################"
+
 
 #WITHIN CONTAINER (NOT USED)
 #sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*

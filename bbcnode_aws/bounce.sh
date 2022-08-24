@@ -22,7 +22,9 @@ instance_id=$(curl -s "http://169.254.169.254/latest/meta-data/instance-id")
 instance_region=$(curl -s "http://169.254.169.254/latest/meta-data/placement/region")
 PASSWORD=`aws ssm get-parameter --name "/rstudio/user/sc-environments/ec2-instance/${instance_id}"  --region $instance_region --with-decryption --output text | cut -f 7`
 MYIP=`curl -s ifconfig.me 2> /dev/null`
+echo "#######################################################"
 echo "You can log into RSTUDIO SERVER at the following URL:" > /etc/motd
 echo  https://$MYIP.nip.io  >> /etc/motd
 echo  username: ec2-user  >> /etc/motd
 echo  password: $PASSWORD  >> /etc/motd
+echo "#######################################################"
