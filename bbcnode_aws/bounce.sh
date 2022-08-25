@@ -14,7 +14,7 @@ echo >> /etc/motd
 echo "#######################################################" >> /etc/motd
 echo "You can log into RSTUDIO SERVER at the following URL:" >> /etc/motd
 echo  https://$MYIP.nip.io  >> /etc/motd
-echo  username: ec2-user   >> /etc/motd
+echo  username: manageR   >> /etc/motd
 echo  password: $PASSWORD  >> /etc/motd
 echo >> /etc/motd
 echo  please note it may take a minute or two for rstudio to be ready >> /etc/motd

@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
 
-  centos:
+  alma9:
     container_name: rstudio_bbc
     hostname: rstudio_bbc
     network_mode: bridge 
@@ -10,7 +10,9 @@ services:
     cap_add:
       - SYS_ADMIN
       - DAC_READ_SEARCH
-    image: 639677452477.dkr.ecr.us-east-2.amazonaws.com/rstudio:1
+    environment:
+      - TZ=America/Detroit
+    image: 639677452477.dkr.ecr.us-east-2.amazonaws.com/rstudio:2
     volumes:
       # Authentication we use SSSD.
       #- /var/run/nscd/socket:/var/run/nscd/socket
@@ -22,9 +24,14 @@ services:
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
       - /home/ec2-user/studies:/data/studies
-      - /home/ec2-user:/home/ec2-user
+      - /home/ec2-user:/home/manageR
+
+
+      # TIMEZONE
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
     ports:
-      - 8080:22099
+      - 8080:22098
 
     restart: always
