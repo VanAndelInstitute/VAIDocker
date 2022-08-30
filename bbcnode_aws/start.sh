@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#check if we are on a instance that has dedicated SSD
+if [ -b "/dev/nvme1n1" ]; 
+then
+    lsblk |grep nvme1n1 |grep -v home && mkfs.ext4 -E nodiscard /dev/nvme1n1
+    mkdir /home/ec2-user/SSD_tempspace
+    mount -o discard,noatime /dev/nvme1n1 /home/ec2-user/SSD_tempspace
+fi    
+
 #install docker
 yum -y install git docker
 systemctl enable docker
