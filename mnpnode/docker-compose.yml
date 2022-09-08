@@ -29,6 +29,12 @@ services:
       - /varidata/research/software:/varidata/research/software/:ro
       - /varidata/research/clustermgmt/shared-ha/modulefiles:/cm/shared/modulefiles:ro
 
+      # TIMEZONE
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+
+
+
     ports:
       - 22000-22100:22000-22100
 
