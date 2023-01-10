@@ -6,12 +6,12 @@ services:
     container_name: ansible_awx_vai 
     hostname: awx
     network_mode: bridge
-    privileged: false
+    privileged: true 
 #    used for allowing cifs mounts within countainer
 #    cap_add:
 #      - SYS_ADMIN
 #      - DAC_READ_SEARCH
-    build: ../systemd/rocky9
+    image: almalinux:9-init 
     volumes:
       # Authentication we use SSSD.
       - /var/run/nscd/socket:/var/run/nscd/socket
