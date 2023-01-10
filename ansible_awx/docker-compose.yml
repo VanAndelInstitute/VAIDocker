@@ -11,7 +11,7 @@ services:
 #    cap_add:
 #      - SYS_ADMIN
 #      - DAC_READ_SEARCH
-    image: almalinux:9-init 
+    image: almalinux/9-init 
     volumes:
       # Authentication we use SSSD.
       - /var/run/nscd/socket:/var/run/nscd/socket
