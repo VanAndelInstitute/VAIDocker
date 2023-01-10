@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+
+  centos:
+    container_name: ansible_awx_vai 
+    hostname: awx
+    network_mode: bridge
+    privileged: false
+#    used for allowing cifs mounts within countainer
+#    cap_add:
+#      - SYS_ADMIN
+#      - DAC_READ_SEARCH
+    build: ../systemd/rocky9
+    volumes:
+      # Authentication we use SSSD.
+      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf
+      - /etc/pam.d:/etc/pam.d
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+      # Authentication cannot mount individual files, because the mapping is
+      # based on the inode
+      - /data/awx:/data:rw
+
+    ports:
+      - 8080:80
+      - 8443:443
+
+    restart: always
