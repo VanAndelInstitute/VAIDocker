@@ -19,7 +19,8 @@ services:
       computenet:
         ipv4_address: 10.152.223.1
     privileged: true
-    build: ./
+    #build: ./
+    image: hpcnode
 
     volumes:
       # Authentication we use SSSD.
@@ -27,15 +28,12 @@ services:
       - /etc/krb5.conf:/etc/krb5.conf
       - /etc/pam.d:/etc/pam.d
       - /var/lib/sss/pipes:/var/lib/sss/pipes
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /etc/authselect:/etc/authselect
 
       # data
       - /varidata:/varidata:rw
-      - /primary:/primary:rw
-      - /secondary:/secondary:rw
       - /tmp:/var/tmp:rw
       - /varidata/research/home:/home:rw
-      - /etc/hosts:/etc/hosts:ro
       - /varidata/research/clustermgmt/bright92/shared:/cm/shared:rw
       - /varidata/research/clustermgmt/shared-ha/modulefiles/bbc:/cm/shared/modulefiles/bbc:rw
       - /cm/local:/cm/local

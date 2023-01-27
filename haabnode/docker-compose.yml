@@ -23,7 +23,7 @@ services:
 
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
-      - /varidata/research/projects/haab/rstudio_node122:/data:rw
+      - /data/data:/data:rw
 
       - /varidata/research/projects/haab:/varidata/research/projects/haab:ro
       - /varidata/research/software:/varidata/research/software/:ro

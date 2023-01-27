@@ -5,7 +5,7 @@
  tar -jxvf slurm-$SLURMVER.tar.bz2
  cd slurm-$SLURMVER
  ./configure
- make -j 2
+ make -j 32 
  make install
  cd contribs/torque
  make install
