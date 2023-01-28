@@ -9,11 +9,12 @@ cp /varidata/research/clustermgmt/vaihpc/munge/munge.key /etc/munge
 chown munge /etc/munge/munge.key
 systemctl start	munge
 
-#SET HOSTNAME
-#myIP=`ifconfig | awk '/10.152.220/ {print $2}'`
-#myHost=`cat /etc/hosts | grep $myIP | awk '{print $2}'`
-#hostname $myHost
-
-#SLURMD
-cp /varidata/research/clustermgmt/vaihpc/slurm/etc/* /usr/local/etc
-systemctl start	slurmd
+if [[ -z "${SLURM_MASTER}" ]]; then
+    #SLURMD (this is a compute node)
+    cp /varidata/research/clustermgmt/vaihpc/slurm/etc/* /usr/local/etc
+    systemctl start	slurmd
+else
+    #SLURMCTLD (We are starting the master)
+    cp /cm/shared/vaihpc/slurm/etc/* /usr/local/etc/
+    systemctl start	slurmctld
+fi
