@@ -1,25 +1,8 @@
 version: '3.1'
 
-networks:
-  computenet:
-    driver: ipvlan
-    driver_opts:
-      parent: eth2
-    ipam:
-      config:
-        - subnet: 10.152.222.0/23
-          gateway: 10.152.222.1
-          ip_range: 10.152.223.0/24
-
 services:
-  compute001:
-    container_name: compute001
-    hostname: compute001
-    networks: 
-      computenet:
-        ipv4_address: 10.152.223.1
+  compute:
     privileged: true
-    #build: ./
     image: hpcnode
 
     volumes:
@@ -29,6 +12,7 @@ services:
       - /etc/pam.d:/etc/pam.d
       - /var/lib/sss/pipes:/var/lib/sss/pipes
       - /etc/authselect:/etc/authselect
+      - /varidata/research/admin/VAIDocker/hpcnode/ssh:/root/.ssh
 
       # data
       - /varidata:/varidata:rw
@@ -37,6 +21,7 @@ services:
       - /varidata/research/clustermgmt/bright92/shared:/cm/shared:rw
       - /varidata/research/clustermgmt/shared-ha/modulefiles/bbc:/cm/shared/modulefiles/bbc:rw
       - /cm/local:/cm/local
+      - /etc/hosts:/etc/hosts
       
     tmpfs:
       - /run

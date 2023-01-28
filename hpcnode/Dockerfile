@@ -11,7 +11,8 @@ yum install -y --allowerasing curl libcurl libcurl-devel && \
 yum install -y  rsyslog openssl-devel libuuid-devel libseccomp-devel wget squashfs-tools vim unzip wget sssd-client \
 openssh-server sudo golang git lftp python python3 tmux environment-modules munge munge-devel pam-devel \
 libyaml http-parser http-parser-devel hwloc hwloc-devel rrdtool rrdtool-devel readline readline-devel net-tools \
-bind-utils perl-FindBin perl-autouse perl-ExtUtils-MakeMaker perl-English openssh-server openssh-clients  
+bind-utils perl-FindBin perl-autouse perl-ExtUtils-MakeMaker perl-English openssh-server openssh-clients iputils \
+blas blas-devel lua logrotate coreutils-common p7zip tree ccache
 RUN yum install -y singularity-ce hdf5 hdf5-devel json-devel
 
 #set up module env
