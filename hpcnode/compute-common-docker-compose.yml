@@ -21,7 +21,7 @@ services:
       - /varidata/research/clustermgmt/bright92/shared:/cm/shared:rw
       - /varidata/research/clustermgmt/shared-ha/modulefiles/bbc:/cm/shared/modulefiles/bbc:rw
       - /cm/local:/cm/local
-      - /etc/hosts:/etc/hosts
+      - /etc:/etc/etc.server:ro
       
     tmpfs:
       - /run

@@ -9,6 +9,9 @@ cp /varidata/research/clustermgmt/vaihpc/munge/munge.key /etc/munge
 chown munge /etc/munge/munge.key
 systemctl start	munge
 
+#HOSTS
+cat /etc/etc.server/hosts > /etc/hosts
+
 if [[ -z "${SLURM_MASTER}" ]]; then
     #SLURMD (this is a compute node)
     cp /varidata/research/clustermgmt/vaihpc/slurm/etc/* /usr/local/etc
