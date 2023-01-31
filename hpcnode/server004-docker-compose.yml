@@ -12,14 +12,14 @@ networks:
           ip_range: 10.152.223.0/24
 
 services:
-  compute001:
+  compute004:
     extends: 
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute001
-    hostname: compute001
+    container_name: compute004
+    hostname: compute004
     networks: 
       computenet:
-        ipv4_address: 10.152.223.1
+        ipv4_address: 10.152.223.4
     #cpuset: "0-31"
     cpus: 128.0

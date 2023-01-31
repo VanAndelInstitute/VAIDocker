@@ -22,6 +22,7 @@ services:
       - /varidata/research/clustermgmt/shared-ha/modulefiles/bbc:/cm/shared/modulefiles/bbc:rw
       - /cm/local:/cm/local
       - /etc:/etc/etc.server:ro
+      - /varidata/research/clustermgmt/vaihpc/slurm/etc:/usr/local/etc:rw
       
     tmpfs:
       - /run
