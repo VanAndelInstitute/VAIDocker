@@ -4,12 +4,12 @@ ENV container docker
 LABEL maintainer="zack ramjan"
 
 #set legacy symlinks
-COPY  legacymounts.tar /root
+COPY payloads/legacymounts.tar /root
 #install slurm
-COPY installSlurm.sh /root
-COPY startservices.sh /root
-COPY etcHostsSync.service /etc/systemd/system
-COPY etcHostsSync.timer /etc/systemd/system
+COPY payloads/installSlurm.sh /root
+COPY payloads/startservices.sh /root
+COPY payloads/etcHostsSync.service /etc/systemd/system
+COPY payloads/etcHostsSync.timer /etc/systemd/system
 
 
 RUN yum update -y  && \
@@ -22,7 +22,7 @@ openssh-server sudo golang git lftp python python3 tmux environment-modules mung
 libyaml http-parser http-parser-devel hwloc hwloc-devel rrdtool rrdtool-devel readline readline-devel net-tools \
 bind-utils perl-FindBin perl-autouse perl-ExtUtils-MakeMaker perl-English openssh-server openssh-clients iputils \
 blas blas-devel lua logrotate coreutils-common p7zip tree ccache && \
-yum install -y singularity-ce hdf5 hdf5-devel json-devel && \
+yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel dbus-devel&& \
 #install modules
 echo export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles > /etc/profile.d/modules.sh && \
 echo source /usr/share/Modules/init/bash >> /etc/profile.d/modules.sh && \ 

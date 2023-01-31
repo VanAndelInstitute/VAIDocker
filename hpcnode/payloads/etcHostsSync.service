@@ -1,0 +1,15 @@
+# This service unit is syncing the remote hosts to the local hosts
+# By Zack Ramjan
+# Licensed under GPL V2
+#
+
+[Unit]
+Description=syncing the remote hosts to the local hosts in docker
+Wants=etcHostsSync.timer
+
+[Service]
+Type=oneshot
+ExecStart=bash -c "cat /etc/etc.server/hosts > /etc/hosts"
+
+[Install]
+WantedBy=multi-user.target

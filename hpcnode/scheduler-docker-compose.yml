@@ -4,7 +4,7 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth2
+      parent: ens192
     ipam:
       config:
         - subnet: 10.152.222.0/23
@@ -24,5 +24,17 @@ services:
     environment:
       - SLURM_MASTER=slurm.hpc.vai.org
     cpus: 4.0
-
+  mysql:
+    image: mariadb:latest
+    container_name: mysqlslurm
+    hostname: mysqlslurm
+    environment:
+      MARIADB_ROOT_PASSWORD_HASH: "*097233137F449CDD6DCF0449FA11B5D189340B3B"
+      MARIADB_DATABASE: slurm_acct_db
+    networks: 
+      computenet:
+        ipv4_address: 10.152.223.253
+    volumes:
+      - /varidata/research/clustermgmt/vaihpc/slurm/var/lib/mysql:/var/lib/mysql 
+      - /varidata/research/clustermgmt/vaihpc/slurm/etc/mysql/conf.d:/etc/mysql/conf.d 
   

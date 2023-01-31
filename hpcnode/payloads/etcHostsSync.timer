@@ -1,0 +1,12 @@
+[Unit]
+Description=syncing the remote hosts to the local hosts in docker every 15-30 minutes
+Requires=etcHostsSync.service
+
+[Timer]
+Unit=etcHostsSync.service
+OnUnitInactiveSec=15m
+RandomizedDelaySec=15m
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target
