@@ -1,0 +1,14 @@
+# By Zack Ramjan
+# Licensed under GPL V2
+#
+
+[Unit]
+Description=make sure slurm is running in docker every 15-30 minutes
+Wants=etcHostsSync.timer
+
+[Service]
+Type=oneshot
+ExecStart=bash -c "! test -e /var/run/slurm.started && touch /var/run/slurm.started && bash /root/startservices.sh"
+
+[Install]
+WantedBy=multi-user.target

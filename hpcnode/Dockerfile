@@ -10,6 +10,8 @@ COPY payloads/installSlurm.sh /root
 COPY payloads/startservices.sh /root
 COPY payloads/etcHostsSync.service /etc/systemd/system
 COPY payloads/etcHostsSync.timer /etc/systemd/system
+COPY payloads/slurmStart.service /etc/systemd/system
+COPY payloads/slurmStart.timer /etc/systemd/system
 
 
 RUN yum update -y  && \
@@ -33,4 +35,5 @@ bash /root/installSlurm.sh && \
 #make /etc/hosts update with host system
 mkdir /etc/etc.server && \
 cp /etc/hosts /etc/etc.server/hosts && \
-systemctl enable etcHostsSync.timer
+systemctl enable etcHostsSync.timer && \
+systemctl enable slurmStart.timer

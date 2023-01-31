@@ -1,0 +1,12 @@
+[Unit]
+Description=make sure slurm is running in docker every 15-30 minutes
+Requires=slurmStart.service
+
+[Timer]
+Unit=etcHostsSync.service
+OnUnitInactiveSec=15m
+RandomizedDelaySec=15m
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target

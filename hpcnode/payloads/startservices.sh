@@ -13,11 +13,13 @@ systemctl start	munge
 cat /etc/etc.server/hosts > /etc/hosts
 
 cp /varidata/research/clustermgmt/vaihpc/slurm/etc/* /usr/local/etc
-if [[ -z "${SLURM_MASTER}" ]]; then
-    #SLURMD (this is a compute node)
-    systemctl start slurmd
-else
+sleep 60
+if [ "$HOSTNAME" =  "slurm" ]; then
     #SLURMCTLD (We are starting the master)
     systemctl start slurmdbd
+    sleep 60
     systemctl start slurmctld
+else
+    #SLURMD (this is a compute node)
+    systemctl start slurmd
 fi

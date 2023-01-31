@@ -21,8 +21,6 @@ services:
     networks: 
       computenet:
         ipv4_address: 10.152.223.254
-    environment:
-      - SLURM_MASTER=slurm.hpc.vai.org
     cpus: 4.0
   mysql:
     image: mariadb:latest
