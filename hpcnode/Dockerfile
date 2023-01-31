@@ -8,6 +8,9 @@ COPY  legacymounts.tar /root
 #install slurm
 COPY installSlurm.sh /root
 COPY startservices.sh /root
+COPY etcHostsSync.service /etc/systemd/system
+COPY etcHostsSync.timer /etc/systemd/system
+
 
 RUN yum update -y  && \
 yum install -y yum-utils epel-release && \
@@ -29,4 +32,5 @@ tar xvf /root/legacymounts.tar && \
 bash /root/installSlurm.sh && \
 #make /etc/hosts update with host system
 mkdir /etc/etc.server && \
-cp /etc/hosts /etc/etc.server/hosts 
+cp /etc/hosts /etc/etc.server/hosts && \
+systemctl enable etcHostsSync.timer
