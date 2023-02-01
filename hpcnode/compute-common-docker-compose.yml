@@ -4,6 +4,8 @@ services:
   compute:
     privileged: true
     image: vanandelinstitute/hpc
+    environment:
+      TZ: "America/Detroit"
 
     volumes:
       # Authentication we use SSSD.
@@ -13,6 +15,7 @@ services:
       - /var/lib/sss/pipes:/var/lib/sss/pipes
       - /etc/authselect:/etc/authselect
       - /varidata/research/admin/VAIDocker/hpcnode/ssh:/root/.ssh
+      - /etc/localtime:/etc/localtime
 
       # data
       - /varidata:/varidata:rw
