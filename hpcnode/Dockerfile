@@ -24,7 +24,7 @@ openssh-server sudo golang git lftp python python3 tmux environment-modules mung
 libyaml http-parser http-parser-devel hwloc hwloc-devel rrdtool rrdtool-devel readline readline-devel net-tools \
 bind-utils perl-FindBin perl-autouse perl-ExtUtils-MakeMaker perl-English openssh-server openssh-clients iputils \
 blas blas-devel lua logrotate coreutils-common p7zip tree ccache && \
-yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel dbus-devel&& \
+yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel dbus-devel numactl-lib openmpi openmpi-devel&& \
 #install modules
 echo export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles > /etc/profile.d/modules.sh && \
 echo source /usr/share/Modules/init/bash >> /etc/profile.d/modules.sh && \ 
