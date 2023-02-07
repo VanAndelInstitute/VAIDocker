@@ -25,7 +25,7 @@ libyaml http-parser http-parser-devel hwloc hwloc-devel rrdtool rrdtool-devel re
 bind-utils perl-FindBin perl-autouse perl-ExtUtils-MakeMaker perl-English openssh-server openssh-clients iputils \
 blas blas-devel lua logrotate coreutils-common p7zip tree ccache && \
 yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel dbus-devel numactl-libs numactl-devel openmpi openmpi-devel \
-hostname mvapich2 mvapich2-devel cmake rsync telnet emacs-nox && \
+hostname mvapich2 mvapich2-devel cmake rsync telnet emacs-nox bc && \
 #install modules
 echo export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles > /etc/profile.d/modules.sh && \
 echo source /usr/share/Modules/init/bash >> /etc/profile.d/modules.sh && \ 
