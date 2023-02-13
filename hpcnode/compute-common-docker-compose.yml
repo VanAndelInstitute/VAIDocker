@@ -14,7 +14,8 @@ services:
       - /etc/pam.d:/etc/pam.d
       - /var/lib/sss/pipes:/var/lib/sss/pipes
       - /etc/authselect:/etc/authselect
-      - /varidata/research/admin/VAIDocker/hpcnode/ssh:/root/.ssh
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/ssh:/root/.ssh
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/sshd_config:/etc/ssh/sshd_config
       - /etc/localtime:/etc/localtime
 
       # data
