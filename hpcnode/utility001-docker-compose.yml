@@ -30,7 +30,7 @@ services:
     hostname: submit001
     networks: 
       computenet:
-        ipv4_address: 10.152.223.252
+        ipv4_address: 10.152.223.251
     cpus: 10.0
 
   submit002:
@@ -41,5 +41,5 @@ services:
     hostname: submit002
     networks: 
       computenet:
-        ipv4_address: 10.152.223.251
+        ipv4_address: 10.152.223.252
   
