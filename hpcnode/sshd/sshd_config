@@ -23,9 +23,9 @@ Include /etc/ssh/sshd_config.d/*.conf
 #ListenAddress 0.0.0.0
 #ListenAddress ::
 
-HostKey /varidata/research/clustermgmt/vaihpc/hpcnode/sshd/ssh_host_rsa_key
-HostKey /varidata/research/clustermgmt/vaihpc/hpcnode/sshd/ssh_host_ecdsa_key
-HostKey /varidata/research/clustermgmt/vaihpc/hpcnode/sshd/ssh_host_ed25519_key
+HostKey /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_rsa_key
+HostKey /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_ecdsa_key
+HostKey /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_ed25519_key
 
 # Ciphers and keying
 #RekeyLimit default none
