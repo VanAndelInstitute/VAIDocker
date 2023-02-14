@@ -29,7 +29,7 @@ yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel d
 hostname mvapich2 mvapich2-devel cmake rsync telnet emacs-nox bc nmap-ncat python3-websockify xorg-x11-xauth xkbcomp dbus-x11 && \
 #install turboVNC
 wget "https://sourceforge.net/projects/turbovnc/files/3.0.2/turbovnc-3.0.2.x86_64.rpm/download" -O /root/turbovnc.rpm && \
-rpm -ivh /root/turbovnc.rpm && \
+rpm -ivh --nodeps /root/turbovnc.rpm && \
 rm /root/turbovnc.rpm && \
 #install modules
 echo export MODULEPATH=/cm/local/modulefiles:/cm/shared/modulefiles > /etc/profile.d/modules.sh && \
