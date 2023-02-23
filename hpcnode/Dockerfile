@@ -38,6 +38,7 @@ echo source /usr/share/Modules/init/bash >> /etc/profile.d/modules.sh && \
 tar xvf /root/legacymounts.tar && \
 #install slurm
 bash /root/installSlurm.sh && \
+rm -rf /root/slurm-* && \
 #make /etc/hosts update with host system
 mkdir /etc/etc.server && \
 cp /etc/hosts /etc/etc.server/hosts && \
