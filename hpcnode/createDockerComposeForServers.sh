@@ -1,0 +1,19 @@
+#!/bin/bash
+./generateComputeNodeEntries.pl --start 1 --end 32 --cpus 8 --memory 32 --interface eth2 > server001-docker-compose.yml
+./generateComputeNodeEntries.pl --start 33 --end 42 --cpus 16 --memory 100 --interface eth3 > server002-docker-compose.yml
+./generateComputeNodeEntries.pl --start 45 --end 48 --cpus 40 --memory 256 --interface eth2 > server003-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server004-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server005-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth3 > server006-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth3 > server007-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth3 > server008-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth3 > server009-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server010-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server011-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server012-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server013-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth3 > server014-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth3 > server015-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server016-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server017-docker-compose.yml
+./generateComputeNodeEntries.pl --start 1 --end 2 --cpus 32 --memory 16 --interface eth2 > server018-docker-compose.yml
