@@ -18,31 +18,487 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
-    ports: 
+    ports:
       - 9001:9001
     restart: always
- 
+
   compute001:
-    extends: 
+    extends:
       file: compute-common-docker-compose.yml
       service: compute
     container_name: compute001
     hostname: compute001
-    networks: 
+    networks:
       computenet:
         ipv4_address: 10.152.223.1
-    #cpuset: "0-31"
-    cpus: 128.0
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute002:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute002
+    hostname: compute002
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.2
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute003:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute003
+    hostname: compute003
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.3
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute004:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute004
+    hostname: compute004
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.4
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute005:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute005
+    hostname: compute005
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.5
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute006:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute006
+    hostname: compute006
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.6
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute007:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute007
+    hostname: compute007
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.7
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
 
   compute008:
-    extends: 
+    extends:
       file: compute-common-docker-compose.yml
       service: compute
     container_name: compute008
     hostname: compute008
-    networks: 
+    networks:
       computenet:
         ipv4_address: 10.152.223.8
-    #cpuset: "0-31"
-    cpus: 2.0
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute009:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute009
+    hostname: compute009
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.9
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute010:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute010
+    hostname: compute010
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.10
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute011:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute011
+    hostname: compute011
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.11
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute012:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute012
+    hostname: compute012
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.12
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute013:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute013
+    hostname: compute013
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.13
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute014:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute014
+    hostname: compute014
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.14
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute015:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute015
+    hostname: compute015
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.15
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute016:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute016
+    hostname: compute016
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.16
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute017:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute017
+    hostname: compute017
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.17
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute018:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute018
+    hostname: compute018
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.18
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute019:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute019
+    hostname: compute019
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.19
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute020:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute020
+    hostname: compute020
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.20
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute021:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute021
+    hostname: compute021
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.21
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute022:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute022
+    hostname: compute022
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.22
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute023:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute023
+    hostname: compute023
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.23
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute024:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute024
+    hostname: compute024
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.24
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute025:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute025
+    hostname: compute025
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.25
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute026:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute026
+    hostname: compute026
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.26
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute027:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute027
+    hostname: compute027
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.27
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute028:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute028
+    hostname: compute028
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.28
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute029:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute029
+    hostname: compute029
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.29
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute030:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute030
+    hostname: compute030
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.30
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute031:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute031
+    hostname: compute031
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.31
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
+
+  compute032:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute032
+    hostname: compute032
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.32
+    deploy:
+      resources:
+        limits:
+          cpus: 8
+          memory: 32G
 

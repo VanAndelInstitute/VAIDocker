@@ -22,14 +22,33 @@ services:
       - 9001:9001
     restart: always
 
-  compute011:
-    extends: 
+  compute071:
+    extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute011
-    hostname: compute011
-    networks: 
+    container_name: compute071
+    hostname: compute071
+    networks:
       computenet:
-        ipv4_address: 10.152.223.11
-    #cpuset: "0-31"
-    cpus: 128.0
+        ipv4_address: 10.152.223.71
+    deploy:
+      resources:
+        limits:
+          cpus: 64
+          memory: 512G
+
+  compute072:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute072
+    hostname: compute072
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.72
+    deploy:
+      resources:
+        limits:
+          cpus: 64
+          memory: 512G
+

@@ -4,7 +4,7 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth3
+      parent: eth2
     ipam:
       config:
         - subnet: 10.152.222.0/23
@@ -22,14 +22,63 @@ services:
       - 9001:9001
     restart: always
 
-  compute007:
-    extends: 
+  compute061:
+    extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute007
-    hostname: compute007
-    networks: 
+    container_name: compute061
+    hostname: compute061
+    networks:
       computenet:
-        ipv4_address: 10.152.223.7
-    #cpuset: "0-31"
-    cpus: 128.0
+        ipv4_address: 10.152.223.61
+    deploy:
+      resources:
+        limits:
+          cpus: 40
+          memory: 256G
+
+  compute062:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute062
+    hostname: compute062
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.62
+    deploy:
+      resources:
+        limits:
+          cpus: 40
+          memory: 256G
+
+  compute063:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute063
+    hostname: compute063
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.63
+    deploy:
+      resources:
+        limits:
+          cpus: 40
+          memory: 256G
+
+  compute064:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute064
+    hostname: compute064
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.64
+    deploy:
+      resources:
+        limits:
+          cpus: 40
+          memory: 256G
+
