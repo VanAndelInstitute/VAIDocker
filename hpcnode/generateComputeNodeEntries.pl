@@ -30,7 +30,7 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth2
+      parent: $interface
     ipam:
       config:
         - subnet: 10.152.222.0/23
