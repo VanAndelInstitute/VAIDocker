@@ -12,6 +12,7 @@ COPY payloads/etcHostsSync.service /etc/systemd/system
 COPY payloads/etcHostsSync.timer /etc/systemd/system
 COPY payloads/slurmStart.service /etc/systemd/system
 COPY payloads/slurmStart.timer /etc/systemd/system
+COPY payloads/hpcadmins_sudoers /etc/sudoers.d
 
 
 RUN yum update -y  && \
@@ -24,7 +25,7 @@ yum install -y  rsyslog openssl-devel libuuid-devel libseccomp-devel wget squash
 openssh-server sudo golang git lftp python python3 tmux environment-modules munge munge-devel pam-devel \
 libyaml http-parser http-parser-devel hwloc hwloc-devel rrdtool rrdtool-devel readline readline-devel net-tools \
 bind-utils perl-FindBin perl-autouse perl-ExtUtils-MakeMaker perl-English openssh-server openssh-clients iputils \
-blas blas-devel lua lua-devel logrotate coreutils-common p7zip tree ccache && \
+blas blas-devel lua lua-devel logrotate coreutils-common p7zip tree ccache gnuplot && \
 yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel dbus-devel numactl-libs numactl-devel openmpi openmpi-devel \
 hostname mvapich2 mvapich2-devel cmake rsync telnet emacs-nox bc nmap-ncat python3-websockify xorg-x11-xauth xkbcomp dbus-x11 firefox && \
 #install turboVNC
