@@ -5,6 +5,7 @@ LABEL maintainer="zack ramjan"
 
 #set legacy symlinks
 COPY payloads/legacymounts.tar /root
+
 #install slurm
 COPY payloads/installSlurm.sh /root
 COPY payloads/startservices.sh /root
@@ -12,7 +13,6 @@ COPY payloads/etcHostsSync.service /etc/systemd/system
 COPY payloads/etcHostsSync.timer /etc/systemd/system
 COPY payloads/slurmStart.service /etc/systemd/system
 COPY payloads/slurmStart.timer /etc/systemd/system
-COPY payloads/hpcadmins_sudoers /etc/sudoers.d
 
 
 RUN yum update -y  && \
@@ -45,3 +45,5 @@ mkdir /etc/etc.server && \
 cp /etc/hosts /etc/etc.server/hosts && \
 systemctl enable etcHostsSync.timer && \
 systemctl enable slurmStart.timer
+
+COPY payloads/hpcadmins_sudoers /etc/sudoers.d
