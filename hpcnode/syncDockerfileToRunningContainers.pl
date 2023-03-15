@@ -11,6 +11,8 @@ $end = shift @ARGV || 254;
 #test if git repo is up to date
 
 chdir($EXECPATH);
+print STDERR "\ninspecting $EXECPATH/Dockerfile...\n\n";
+sleep 1;
 $gitOutput =  `git fetch --dry-run;git diff Dockerfile`;
 chomp $gitOutput;
 die "This git repo is not up to date, please push any local to master, or pull/fetch any changes from remote\n" if $gitOutput;
@@ -22,7 +24,7 @@ while ($dockerFile =~ /(yum\s+install\s.+?)(\n|\&)/gm)
 	push @commands, $1;
 }
 
-print STDERR "will run on 10.152.223.$start to 10.152.223.$end:\n\n\t" . join("\n\t", @commands) . "\n";
+print STDERR "The following will run on 10.152.223.$start to 10.152.223.$end:\n\n\t" . join("\n\t", @commands) . "\n";
 print STDERR "\n\npausing for 5 seconds, hit ctrl-c to exit if desired...\n";
 sleep 5;
 
