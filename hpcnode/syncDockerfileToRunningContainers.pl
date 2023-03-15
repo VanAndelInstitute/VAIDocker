@@ -16,12 +16,15 @@ chomp $gitOutput;
 die "This git repo is not up to date, please push any local to master, or pull/fetch any changes from remote\n" if $gitOutput;
 
 $dockerFile =~ s/\\\n/ /g;
-print STDERR "running yum install of following:\n";
 my @commands;
 while ($dockerFile =~ /(yum\s+install\s.+?)(\n|\&)/gm)
 {
 	push @commands, $1;
 }
+
+print STDERR "will run on 10.152.223.$start to 10.152.223.$end:\n\n\t" . join("\n\t", @commands) . "\n";
+print STDERR "\n\npausing for 5 seconds, hit ctrl-c to exit if desired...\n";
+sleep 5;
 
 for my $n ($start..$end)
 {
