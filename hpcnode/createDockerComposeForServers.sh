@@ -15,5 +15,7 @@
 ./generateComputeNodeEntries.pl --start 79 --end 79 --cpus 128 --memory 1000 --interface eth3 > server014-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 80 --end 80 --cpus 128 --memory 1000 --interface eth3 > server015-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 81 --end 81 --cpus 128 --memory 1000 --interface eth2 > server016-docker-compose.yml
-./generateComputeNodeEntries.pl --start 82 --end 82 --cpus 128 --memory 1000 --interface eth2 > server017-docker-compose.yml
-./generateComputeNodeEntries.pl --start 83 --end 83 --cpus 128 --memory 1000 --interface eth2 > server018-docker-compose.yml
+./generateComputeNodeEntries.pl --start 82 --end 82 --cpus 128 --memory 2000 --interface eth2 > server017-docker-compose.yml
+./generateComputeNodeEntries.pl --start 83 --end 83 --cpus 128 --memory 2000 --interface eth2 > server018-docker-compose.yml
+./generateComputeNodeEntries.pl --start 84 --end 84 --cpus 28 --memory 256 --interface eth2 > server023-docker-compose.yml
+./generateComputeNodeEntries.pl --start 85 --end 85 --cpus 28 --memory 256 --interface eth2 > server024-docker-compose.yml
