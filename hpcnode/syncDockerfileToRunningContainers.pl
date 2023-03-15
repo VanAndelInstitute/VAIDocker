@@ -6,7 +6,7 @@ my $EXECPATH = abs_path(dirname(__FILE__));
 my $dockerFile = do{local(@ARGV,$/)="$EXECPATH/Dockerfile";<>};
 $SIG{INT} = \&tsktsk;
 $start = shift @ARGV || 1;
-$end = shift @ARGV || 254;
+$end = shift @ARGV || ($start == 1 ? 254 : $start);
 
 #test if git repo is up to date
 
