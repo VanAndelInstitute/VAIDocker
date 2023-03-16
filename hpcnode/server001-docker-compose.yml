@@ -35,7 +35,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute002:
     extends:
@@ -50,7 +50,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute003:
     extends:
@@ -65,7 +65,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute004:
     extends:
@@ -80,7 +80,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute005:
     extends:
@@ -95,7 +95,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute006:
     extends:
@@ -110,7 +110,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute007:
     extends:
@@ -125,7 +125,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute008:
     extends:
@@ -140,7 +140,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute009:
     extends:
@@ -155,7 +155,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute010:
     extends:
@@ -170,7 +170,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute011:
     extends:
@@ -185,7 +185,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute012:
     extends:
@@ -200,7 +200,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute013:
     extends:
@@ -215,7 +215,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute014:
     extends:
@@ -230,7 +230,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute015:
     extends:
@@ -245,7 +245,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute016:
     extends:
@@ -260,7 +260,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute017:
     extends:
@@ -275,7 +275,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute018:
     extends:
@@ -290,7 +290,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute019:
     extends:
@@ -305,7 +305,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute020:
     extends:
@@ -320,7 +320,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute021:
     extends:
@@ -335,7 +335,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute022:
     extends:
@@ -350,7 +350,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute023:
     extends:
@@ -365,7 +365,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute024:
     extends:
@@ -380,7 +380,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute025:
     extends:
@@ -395,7 +395,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute026:
     extends:
@@ -410,7 +410,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute027:
     extends:
@@ -425,7 +425,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute028:
     extends:
@@ -440,7 +440,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute029:
     extends:
@@ -455,7 +455,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute030:
     extends:
@@ -470,7 +470,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute031:
     extends:
@@ -485,7 +485,7 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 
   compute032:
     extends:
@@ -500,5 +500,5 @@ services:
       resources:
         limits:
           cpus: 8
-          memory: 32G
+          memory: 30G
 

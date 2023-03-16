@@ -35,7 +35,7 @@ services:
       resources:
         limits:
           cpus: 40
-          memory: 256G
+          memory: 220G
 
   compute050:
     extends:
@@ -50,7 +50,7 @@ services:
       resources:
         limits:
           cpus: 40
-          memory: 256G
+          memory: 220G
 
   compute051:
     extends:
@@ -65,7 +65,7 @@ services:
       resources:
         limits:
           cpus: 40
-          memory: 256G
+          memory: 220G
 
   compute052:
     extends:
@@ -80,5 +80,5 @@ services:
       resources:
         limits:
           cpus: 40
-          memory: 256G
+          memory: 220G
 
