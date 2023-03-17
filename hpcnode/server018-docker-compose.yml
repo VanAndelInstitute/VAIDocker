@@ -35,5 +35,5 @@ services:
       resources:
         limits:
           cpus: 128
-          memory: 1900G
+          memory: 1800G
 

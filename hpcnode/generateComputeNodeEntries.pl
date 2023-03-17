@@ -22,7 +22,7 @@ GetOptions ("start=i" => \$start,    # numeric
 die $usage unless $start && $end && $cpus && $memory && $interface;
 
 $cpus = $cpus || int((128.0 / (1+$end-$start)));
-
+my $memorySwap = $memory + 1;
 print <<EOF
 version: '3.1'
 
