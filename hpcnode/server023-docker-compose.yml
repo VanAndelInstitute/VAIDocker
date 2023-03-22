@@ -33,9 +33,6 @@ services:
         ipv4_address: 10.152.223.84
     deploy:
       resources:
-	reservations:
-          devices:
-            - capabilities: [gpu]
         limits:
           cpus: 28
           memory: 220G

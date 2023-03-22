@@ -22,18 +22,18 @@ services:
       - 9001:9001
     restart: always
 
-  compute085:
+  compute087:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute085
-    hostname: compute085
+    container_name: compute087
+    hostname: compute087
     networks:
       computenet:
-        ipv4_address: 10.152.223.85
+        ipv4_address: 10.152.223.87
     deploy:
       resources:
         limits:
-          cpus: 28
-          memory: 220G
+          cpus: 128
+          memory: 920G
 

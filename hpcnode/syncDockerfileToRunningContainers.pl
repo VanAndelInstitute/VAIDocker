@@ -31,6 +31,7 @@ sleep 5;
 for my $n ($start..$end)
 {
 	my $ip = "10.152.223.$n";
+	 next if system("ping -c 1 -W .1  $ip");
 	runcmd("ssh root\@$ip \"" . join(";",@commands) . "\"" );
 }
 
