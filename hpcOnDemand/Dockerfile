@@ -1,14 +1,14 @@
 FROM vanandelinstitute/hpc
 
 ### MODIFY ONDEMAND USERNAME AND PASSWORD HERE
-ENV ONDEMAND_USER ondemand
-ENV ONDEMAND_PASSWORD password
+#ZR ENV ONDEMAND_USER ondemand
+#ZR ENV ONDEMAND_PASSWORD password
 #ENV ROOT_PASSWORD password
 ### END MODIFY
 
 ### DO NOT MODIFY ###
-
-RUN adduser $ONDEMAND_USER
+COPY ondemand-web.repo /etc/yum.repos.d/ondemand-web.repo
+#ZR RUN adduser $ONDEMAND_USER
 
 # Setup all SSH stuff
 #ZR RUN yum install -y openssh-server
@@ -26,9 +26,7 @@ RUN adduser $ONDEMAND_USER
 
 # Install OnDemand
 RUN yum update -y \
-    && yum install -y centos-release-scl \
-    && yum install -y https://yum.osc.edu/ondemand/1.6/ondemand-release-web-1.6-4.noarch.rpm \
-    && yum install -y ondemand-selinux
+    && yum install -y ondemand
 
 # Systemd
 #ZR RUN yum -y install systemd; yum clean all; \
@@ -42,9 +40,9 @@ RUN yum update -y \
 #ZR     rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 #ZR RUN systemctl enable sshd.service
-RUN systemctl enable httpd24-httpd
+RUN systemctl enable httpd
 
-RUN scl enable ondemand -- htpasswd -cb /opt/rh/httpd24/root/etc/httpd/.htpasswd $ONDEMAND_USER $ONDEMAND_PASSWORD
+#ZR RUN scl enable ondemand -- htpasswd -cb /opt/rh/httpd24/root/etc/httpd/.htpasswd $ONDEMAND_USER $ONDEMAND_PASSWORD
 
 #ZR COPY ./entrypoint.sh /usr/sbin/entrypoint
 #ZR RUN chmod a+x /usr/sbin/entrypoint
