@@ -7,6 +7,7 @@ FROM vanandelinstitute/hpc
 ### END MODIFY
 
 ### DO NOT MODIFY ###
+RUN yum install -y https://yum.osc.edu/ondemand/latest/ondemand-release-web-3.0-1.noarch.rpm
 COPY ondemand-web.repo /etc/yum.repos.d/ondemand-web.repo
 #ZR RUN adduser $ONDEMAND_USER
 
