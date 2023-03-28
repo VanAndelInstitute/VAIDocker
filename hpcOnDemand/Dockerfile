@@ -7,6 +7,7 @@ FROM vanandelinstitute/hpc
 ### END MODIFY
 
 ### DO NOT MODIFY ###
+RUN yum install -y https://yum.osc.edu/ondemand/latest/ondemand-release-web-3.0-1.noarch.rpm
 COPY ondemand-web.repo /etc/yum.repos.d/ondemand-web.repo
 #ZR RUN adduser $ONDEMAND_USER
 
@@ -26,7 +27,12 @@ COPY ondemand-web.repo /etc/yum.repos.d/ondemand-web.repo
 
 # Install OnDemand
 RUN yum update -y \
-    && yum install -y ondemand
+    && yum install -y ondemand \
+    && yum install -y mod_authnz_pam \
+    && echo "LoadModule authnz_pam_module modules/mod_authnz_pam.so" > /etc/httpd/conf.modules.d/55-authnz_pam.conf
+COPY ood_portal.yml /etc/ood/config/ood_portal.yml
+RUN /opt/ood/ood-portal-generator/sbin/update_ood_portal
+   
 
 # Systemd
 #ZR RUN yum -y install systemd; yum clean all; \

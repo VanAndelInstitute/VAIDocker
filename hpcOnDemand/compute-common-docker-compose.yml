@@ -3,7 +3,7 @@ version: '3.1'
 services:
   compute:
     privileged: true
-    image: vanandelinstitute/hpc
+    image: ondemand
     environment:
       TZ: "America/Detroit"
 
