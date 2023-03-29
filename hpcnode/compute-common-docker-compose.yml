@@ -18,6 +18,7 @@ services:
       - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/sshd_config:/etc/ssh/sshd_config
       - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/sshd_config.d:/etc/ssh/sshd_config.d
       - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_config.d:/etc/ssh/ssh_config.d
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/limits.d:/etc/security/limits.d
       - /etc/localtime:/etc/localtime
 
       # data
