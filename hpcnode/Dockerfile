@@ -26,9 +26,11 @@ openssh-server sudo golang git lftp python python3 tmux environment-modules mung
 libyaml http-parser http-parser-devel hwloc hwloc-devel rrdtool rrdtool-devel readline readline-devel net-tools \
 bind-utils perl-FindBin perl-autouse perl-ExtUtils-MakeMaker perl-English openssh-server openssh-clients iputils \
 blas blas-devel lua lua-devel logrotate coreutils-common p7zip tree ccache gnuplot && \
-yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel dbus-devel numactl-libs numactl-devel openmpi openmpi-devel python3-devel \
-hostname mvapich2 mvapich2-devel cmake rsync telnet emacs-nox bc nmap-ncat python3-websockify xorg-x11-xauth xkbcomp dbus-x11 firefox libtiff libtiff-devel \
-ghostscript libpng-devel libX11-devel bzip2-devel mlocate pcre2-devel gsl-devel postfix s-nail bash-completion fontconfig-devel harfbuzz-devel fribidi-devel && \
+yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel dbus-devel numactl-libs numactl-devel \
+openmpi openmpi-devel python3-devel hostname mvapich2 mvapich2-devel cmake rsync telnet emacs-nox bc nmap-ncat \
+python3-websockify xorg-x11-xauth xkbcomp dbus-x11 firefox libtiff libtiff-devel ghostscript libpng-devel \
+libX11-devel bzip2-devel mlocate pcre2-devel gsl-devel postfix s-nail bash-completion fontconfig-devel harfbuzz-devel \
+fribidi-devel libjpeg-turbo-devel && \
 #install turboVNC
 wget "https://sourceforge.net/projects/turbovnc/files/3.0.2/turbovnc-3.0.2.x86_64.rpm/download" -O /root/turbovnc.rpm && \
 rpm -ivh --nodeps /root/turbovnc.rpm && \

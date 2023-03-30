@@ -30,11 +30,18 @@ sleep 5;
 
 for my $n ($start..$end)
 {
-	my $ip = "10.152.223.$n";
-	 next if system("ping -c 1 -W .1  $ip");
-	runcmd("ssh root\@$ip \"" . join(";",@commands) . "\"" );
+	my $pid = fork;
+	if (not $pid)
+	{
+		my $ip = "10.152.223.$n";
+		exit if system("ping -c 1 -W .1  $ip");
+		runcmd("ssh root\@$ip \"" . join(";",@commands) . "\"" );
+		exit;
+	}
 }
 
+wait for ($start..$end);
+exit;
 
 sub tsktsk {
       $SIG{INT} = \&tsktsk;           # See ``Writing A Signal Handler''
