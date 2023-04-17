@@ -22,32 +22,18 @@ services:
       - 9001:9001
     restart: always
 
-  submit001:
-    extends: 
+  compute092:
+    extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: submit001
-    hostname: submit001
-    networks: 
+    container_name: compute092
+    hostname: compute092
+    networks:
       computenet:
-        ipv4_address: 10.152.223.251
+        ipv4_address: 10.152.223.92
     deploy:
       resources:
         limits:
-          cpus: 10 
-          memory: 80G
+          cpus: 48
+          memory: 220G
 
-  submit002:
-    extends: 
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: submit002
-    hostname: submit002
-    networks: 
-      computenet:
-        ipv4_address: 10.152.223.252
-    deploy:
-      resources:
-        limits:
-          cpus: 10 
-          memory: 80G  
