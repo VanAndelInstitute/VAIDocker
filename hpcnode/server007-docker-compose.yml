@@ -35,7 +35,7 @@ services:
       resources:
         limits:
           cpus: 40
-          memory: 220G
+          memory: 200G
 
   compute062:
     extends:
@@ -50,7 +50,7 @@ services:
       resources:
         limits:
           cpus: 40
-          memory: 220G
+          memory: 200G
 
   compute063:
     extends:
@@ -65,7 +65,7 @@ services:
       resources:
         limits:
           cpus: 40
-          memory: 220G
+          memory: 200G
 
   compute064:
     extends:
@@ -80,5 +80,5 @@ services:
       resources:
         limits:
           cpus: 40
-          memory: 220G
+          memory: 200G
 

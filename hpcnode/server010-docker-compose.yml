@@ -35,7 +35,7 @@ services:
       resources:
         limits:
           cpus: 64
-          memory: 450G
+          memory: 400G
 
   compute072:
     extends:
@@ -50,5 +50,5 @@ services:
       resources:
         limits:
           cpus: 64
-          memory: 450G
+          memory: 400G
 

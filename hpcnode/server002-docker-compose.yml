@@ -35,7 +35,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute034:
     extends:
@@ -50,7 +50,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute035:
     extends:
@@ -65,7 +65,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute036:
     extends:
@@ -80,7 +80,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute037:
     extends:
@@ -95,7 +95,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute038:
     extends:
@@ -110,7 +110,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute039:
     extends:
@@ -125,7 +125,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute040:
     extends:
@@ -140,7 +140,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute041:
     extends:
@@ -155,7 +155,7 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
   compute042:
     extends:
@@ -170,5 +170,5 @@ services:
       resources:
         limits:
           cpus: 16
-          memory: 100G
+          memory: 80G
 
