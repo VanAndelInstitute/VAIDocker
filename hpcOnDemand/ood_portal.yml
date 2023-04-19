@@ -13,7 +13,7 @@
 # Example:
 #     servername: 'www.example.com'
 # Default: null (don't use name-based Virtual Host)
-#servername: null
+servername: ondemand001.hpc.vai.org
 
 # The server aliases used for the name-based Virtual Host
 # Example:
