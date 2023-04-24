@@ -30,6 +30,8 @@ RUN yum update -y \
     && yum install -y ondemand \
     && yum install -y mod_authnz_pam \
     && echo "LoadModule authnz_pam_module modules/mod_authnz_pam.so" > /etc/httpd/conf.modules.d/55-authnz_pam.conf
+RUN mkdir -p /etc/ood/config/clusters.d
+COPY slurm_cluster.yml /etc/ood/config/clusters.d/slurm_cluster.yml
 COPY ood_portal.yml /etc/ood/config/ood_portal.yml
 RUN /opt/ood/ood-portal-generator/sbin/update_ood_portal
    

@@ -1,0 +1,12 @@
+# /etc/ood/config/clusters.d/slurm_cluster.yml
+---
+v2:
+  metadata:
+    title: "HPC"
+  login:
+    host: "access.hpc.vai.org"
+  job:
+    adapter: "slurm"
+    cluster: "hpc"
+    bin: "/usr/local/bin"
+    conf: "/usr/local/etc/slurm.conf"
