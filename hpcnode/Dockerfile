@@ -30,7 +30,7 @@ yum install -y singularity-ce hdf5 hdf5-devel json-devel mariadb mariadb-devel d
 openmpi openmpi-devel python3-devel hostname mvapich2 mvapich2-devel cmake rsync telnet emacs-nox bc nmap-ncat \
 python3-websockify xorg-x11-xauth xkbcomp dbus-x11 firefox libtiff libtiff-devel ghostscript libpng-devel \
 libX11-devel bzip2-devel mlocate pcre2-devel gsl-devel postfix s-nail bash-completion fontconfig-devel harfbuzz-devel \
-fribidi-devel libjpeg-turbo-devel nano && \
+fribidi-devel libjpeg-turbo-devel nano cairo-devel && \
 #install turboVNC
 wget "https://sourceforge.net/projects/turbovnc/files/3.0.2/turbovnc-3.0.2.x86_64.rpm/download" -O /root/turbovnc.rpm && \
 rpm -ivh --nodeps /root/turbovnc.rpm && \
