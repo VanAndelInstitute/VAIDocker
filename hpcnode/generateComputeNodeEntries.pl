@@ -23,6 +23,8 @@ die $usage unless $start && $end && $cpus && $memory && $interface;
 
 $cpus = $cpus || int((128.0 / (1+$end-$start)));
 my $memorySwap = $memory + 1;
+my $pids = $cpus * 2 + 128;
+$pids = -1 if $end == $start;
 print <<EOF
 version: '3.1'
 
@@ -67,8 +69,9 @@ for my $i ($start..$end)
     deploy:
       resources:
         limits:
-          cpus: $cpus
+          cpus: "$cpus"
           memory: $memory\G
+          pids: $pids
 
 EOF
 ;

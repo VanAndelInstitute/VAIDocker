@@ -34,8 +34,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute034:
     extends:
@@ -49,8 +50,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute035:
     extends:
@@ -64,8 +66,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute036:
     extends:
@@ -79,8 +82,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute037:
     extends:
@@ -94,8 +98,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute038:
     extends:
@@ -109,8 +114,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute039:
     extends:
@@ -124,8 +130,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute040:
     extends:
@@ -139,8 +146,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute041:
     extends:
@@ -154,8 +162,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 
   compute042:
     extends:
@@ -169,6 +178,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 16
+          cpus: "16"
           memory: 80G
+          pids: 160
 

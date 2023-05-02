@@ -34,8 +34,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 64
+          cpus: "64"
           memory: 400G
+          pids: 256
 
   compute076:
     extends:
@@ -49,6 +50,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 64
+          cpus: "64"
           memory: 400G
+          pids: 256
 

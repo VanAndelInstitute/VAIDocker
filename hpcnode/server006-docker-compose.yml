@@ -34,8 +34,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 40
+          cpus: "40"
           memory: 200G
+          pids: 208
 
   compute058:
     extends:
@@ -49,8 +50,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 40
+          cpus: "40"
           memory: 200G
+          pids: 208
 
   compute059:
     extends:
@@ -64,8 +66,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 40
+          cpus: "40"
           memory: 200G
+          pids: 208
 
   compute060:
     extends:
@@ -79,6 +82,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 40
+          cpus: "40"
           memory: 200G
+          pids: 208
 

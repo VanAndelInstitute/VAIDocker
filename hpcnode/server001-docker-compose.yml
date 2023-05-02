@@ -34,8 +34,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute002:
     extends:
@@ -49,8 +50,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute003:
     extends:
@@ -64,8 +66,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute004:
     extends:
@@ -79,8 +82,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute005:
     extends:
@@ -94,8 +98,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute006:
     extends:
@@ -109,8 +114,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute007:
     extends:
@@ -124,8 +130,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute008:
     extends:
@@ -139,8 +146,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute009:
     extends:
@@ -154,8 +162,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute010:
     extends:
@@ -169,8 +178,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute011:
     extends:
@@ -184,8 +194,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute012:
     extends:
@@ -199,8 +210,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute013:
     extends:
@@ -214,8 +226,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute014:
     extends:
@@ -229,8 +242,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute015:
     extends:
@@ -244,8 +258,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute016:
     extends:
@@ -259,8 +274,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute017:
     extends:
@@ -274,8 +290,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute018:
     extends:
@@ -289,8 +306,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute019:
     extends:
@@ -304,8 +322,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute020:
     extends:
@@ -319,8 +338,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute021:
     extends:
@@ -334,8 +354,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute022:
     extends:
@@ -349,8 +370,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute023:
     extends:
@@ -364,8 +386,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute024:
     extends:
@@ -379,8 +402,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute025:
     extends:
@@ -394,8 +418,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute026:
     extends:
@@ -409,8 +434,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute027:
     extends:
@@ -424,8 +450,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute028:
     extends:
@@ -439,8 +466,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute029:
     extends:
@@ -454,8 +482,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute030:
     extends:
@@ -469,8 +498,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute031:
     extends:
@@ -484,8 +514,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
   compute032:
     extends:
@@ -499,6 +530,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: "8"
           memory: 24G
+          pids: 144
 
