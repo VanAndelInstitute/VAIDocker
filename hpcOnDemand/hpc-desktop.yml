@@ -1,0 +1,7 @@
+# /etc/ood/config/apps/bc_desktop/hpc-desktop.yml
+---
+title: "HPC Desktop"
+cluster: "hpc"
+attributes:
+  desktop: "xfce"
+  bc_queue: "quick"

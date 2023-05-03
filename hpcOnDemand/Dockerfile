@@ -35,6 +35,8 @@ COPY slurm_cluster.yml /etc/ood/config/clusters.d/slurm_cluster.yml
 RUN mkdir /etc/ood/config/apps
 RUN mkdir /etc/ood/config/apps/shell
 COPY env /etc/ood/config/apps/shell
+RUN mkdir -p /etc/ood/config/apps/bc_desktop
+COPY hpc-desktop.yml /etc/ood/config/apps/bc_desktop/hpc.yml
 COPY ood_portal.yml /etc/ood/config/ood_portal.yml
 COPY proxy.conf /etc/httpd/conf.d/proxy.conf
 RUN /opt/ood/ood-portal-generator/sbin/update_ood_portal
