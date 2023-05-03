@@ -34,7 +34,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 10 
+          cpus: "10" 
           memory: 80G
 
   submit002:
@@ -49,5 +49,5 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 10 
+          cpus: "10" 
           memory: 80G  
