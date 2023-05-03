@@ -36,6 +36,7 @@ RUN mkdir /etc/ood/config/apps
 RUN mkdir /etc/ood/config/apps/shell
 COPY env /etc/ood/config/apps/shell
 COPY ood_portal.yml /etc/ood/config/ood_portal.yml
+COPY proxy.conf /etc/httpd/conf.d/proxy.conf
 RUN /opt/ood/ood-portal-generator/sbin/update_ood_portal
    
 
