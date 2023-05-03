@@ -10,3 +10,14 @@ v2:
     cluster: "hpc"
     bin: "/usr/local/bin"
     conf: "/usr/local/etc/slurm.conf"
+  batch_connect:
+    basic:
+      script_wrapper: |
+        module purge
+        %s
+    vnc:
+      script_wrapper: |
+        module purge
+        export PATH="/usr/local/turbovnc/bin:$PATH"
+        export WEBSOCKIFY_CMD="/usr/local/websockify/run"
+        %s
