@@ -52,3 +52,4 @@ systemctl enable postfix
 
 COPY payloads/hpcadmins_sudoers /etc/sudoers.d
 COPY payloads/main.cf  /etc/postfix/main.cf
+COPY payloads/rsyslog.scheduler.conf /etc/rsyslog.d/rsyslog.scheduler.conf

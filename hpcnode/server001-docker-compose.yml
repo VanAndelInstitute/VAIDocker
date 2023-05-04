@@ -36,7 +36,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 544
 
   compute002:
     extends:
