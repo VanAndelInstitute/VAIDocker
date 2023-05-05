@@ -36,7 +36,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 544
+          pids: 256
 
   compute002:
     extends:
@@ -52,7 +52,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute003:
     extends:
@@ -68,7 +68,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute004:
     extends:
@@ -84,7 +84,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute005:
     extends:
@@ -100,7 +100,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute006:
     extends:
@@ -116,7 +116,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute007:
     extends:
@@ -132,7 +132,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute008:
     extends:
@@ -148,7 +148,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute009:
     extends:
@@ -164,7 +164,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute010:
     extends:
@@ -180,7 +180,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute011:
     extends:
@@ -196,7 +196,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute012:
     extends:
@@ -212,7 +212,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute013:
     extends:
@@ -228,7 +228,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute014:
     extends:
@@ -244,7 +244,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute015:
     extends:
@@ -260,7 +260,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute016:
     extends:
@@ -276,7 +276,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute017:
     extends:
@@ -292,7 +292,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute018:
     extends:
@@ -308,7 +308,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute019:
     extends:
@@ -324,7 +324,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute020:
     extends:
@@ -340,7 +340,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute021:
     extends:
@@ -356,7 +356,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute022:
     extends:
@@ -372,7 +372,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute023:
     extends:
@@ -388,7 +388,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute024:
     extends:
@@ -404,7 +404,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute025:
     extends:
@@ -420,7 +420,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute026:
     extends:
@@ -436,7 +436,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute027:
     extends:
@@ -452,7 +452,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute028:
     extends:
@@ -468,7 +468,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute029:
     extends:
@@ -484,7 +484,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute030:
     extends:
@@ -500,7 +500,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute031:
     extends:
@@ -516,7 +516,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 
   compute032:
     extends:
@@ -532,5 +532,5 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 144
+          pids: 256
 

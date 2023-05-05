@@ -36,7 +36,7 @@ services:
         limits:
           cpus: "64"
           memory: 400G
-          pids: 256
+          pids: 384
 
   compute078:
     extends:
@@ -52,5 +52,5 @@ services:
         limits:
           cpus: "64"
           memory: 400G
-          pids: 256
+          pids: 384
 

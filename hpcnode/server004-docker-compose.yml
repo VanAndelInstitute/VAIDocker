@@ -36,7 +36,7 @@ services:
         limits:
           cpus: "40"
           memory: 200G
-          pids: 208
+          pids: 256
 
   compute050:
     extends:
@@ -52,7 +52,7 @@ services:
         limits:
           cpus: "40"
           memory: 200G
-          pids: 208
+          pids: 256
 
   compute051:
     extends:
@@ -68,7 +68,7 @@ services:
         limits:
           cpus: "40"
           memory: 200G
-          pids: 208
+          pids: 256
 
   compute052:
     extends:
@@ -84,5 +84,5 @@ services:
         limits:
           cpus: "40"
           memory: 200G
-          pids: 208
+          pids: 256
 
