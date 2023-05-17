@@ -2,7 +2,7 @@
 ---
 v2:
   metadata:
-    title: "HPC"
+    title: "hpc"
   login:
     host: "access.hpc.vai.org"
   job:
@@ -18,6 +18,6 @@ v2:
     vnc:
       script_wrapper: |
         module purge
-        export PATH="/usr/local/turbovnc/bin:$PATH"
-        export WEBSOCKIFY_CMD="/usr/local/websockify/run"
+        export PATH="/opt/TurboVNC/bin:$PATH"
+        export WEBSOCKIFY_CMD="/usr/bin/websockify"
         %s

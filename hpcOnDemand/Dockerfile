@@ -31,7 +31,7 @@ RUN yum update -y \
     && yum install -y mod_authnz_pam \
     && echo "LoadModule authnz_pam_module modules/mod_authnz_pam.so" > /etc/httpd/conf.modules.d/55-authnz_pam.conf
 RUN mkdir -p /etc/ood/config/clusters.d
-COPY slurm_cluster.yml /etc/ood/config/clusters.d/slurm_cluster.yml
+COPY slurm_cluster.yml /etc/ood/config/clusters.d/hpc.yml
 RUN mkdir /etc/ood/config/apps
 RUN mkdir /etc/ood/config/apps/shell
 COPY env /etc/ood/config/apps/shell
