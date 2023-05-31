@@ -37,4 +37,5 @@ services:
           cpus: "128"
           memory: 1800G
           pids: -1
+    memswap_limit: 1800G
 

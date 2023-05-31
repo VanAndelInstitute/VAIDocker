@@ -36,7 +36,8 @@ services:
         limits:
           cpus: "40"
           memory: 200G
-          pids: 256
+          pids: 10280
+    memswap_limit: 200G
 
   compute054:
     extends:
@@ -52,7 +53,8 @@ services:
         limits:
           cpus: "40"
           memory: 200G
-          pids: 256
+          pids: 10280
+    memswap_limit: 200G
 
   compute055:
     extends:
@@ -68,7 +70,8 @@ services:
         limits:
           cpus: "40"
           memory: 200G
-          pids: 256
+          pids: 10280
+    memswap_limit: 200G
 
   compute056:
     extends:
@@ -84,5 +87,6 @@ services:
         limits:
           cpus: "40"
           memory: 200G
-          pids: 256
+          pids: 10280
+    memswap_limit: 200G
 

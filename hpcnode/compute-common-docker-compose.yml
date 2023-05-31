@@ -3,6 +3,8 @@ version: '3.1'
 services:
   compute:
     privileged: true
+    mem_swappiness: 0
+    oom-score-adj: 1000
     image: vanandelinstitute/hpc
     environment:
       TZ: "America/Detroit"

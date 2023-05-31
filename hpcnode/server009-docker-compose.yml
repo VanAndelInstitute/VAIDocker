@@ -36,7 +36,8 @@ services:
         limits:
           cpus: "64"
           memory: 400G
-          pids: 384
+          pids: 10280
+    memswap_limit: 400G
 
   compute070:
     extends:
@@ -52,5 +53,6 @@ services:
         limits:
           cpus: "64"
           memory: 400G
-          pids: 384
+          pids: 10280
+    memswap_limit: 400G
 

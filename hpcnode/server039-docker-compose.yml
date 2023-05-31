@@ -22,15 +22,15 @@ services:
       - 9001:9001
     restart: always
 
-  compute085:
+  compute103:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute085
-    hostname: compute085
+    container_name: compute103
+    hostname: compute103
     networks:
       computenet:
-        ipv4_address: 10.152.223.85
+        ipv4_address: 10.152.223.103
     deploy:
       resources:
         limits:

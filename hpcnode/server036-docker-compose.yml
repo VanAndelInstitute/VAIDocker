@@ -37,4 +37,5 @@ services:
           cpus: "40"
           memory: 280G
           pids: -1
+    memswap_limit: 280G
 

@@ -36,7 +36,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute002:
     extends:
@@ -52,7 +53,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute003:
     extends:
@@ -68,7 +70,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute004:
     extends:
@@ -84,7 +87,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute005:
     extends:
@@ -100,7 +104,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute006:
     extends:
@@ -116,7 +121,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute007:
     extends:
@@ -132,7 +138,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute008:
     extends:
@@ -148,7 +155,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute009:
     extends:
@@ -164,7 +172,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute010:
     extends:
@@ -180,7 +189,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute011:
     extends:
@@ -196,7 +206,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute012:
     extends:
@@ -212,7 +223,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute013:
     extends:
@@ -228,7 +240,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute014:
     extends:
@@ -244,7 +257,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute015:
     extends:
@@ -260,7 +274,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute016:
     extends:
@@ -276,7 +291,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute017:
     extends:
@@ -292,7 +308,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute018:
     extends:
@@ -308,7 +325,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute019:
     extends:
@@ -324,7 +342,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute020:
     extends:
@@ -340,7 +359,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute021:
     extends:
@@ -356,7 +376,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute022:
     extends:
@@ -372,7 +393,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute023:
     extends:
@@ -388,7 +410,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute024:
     extends:
@@ -404,7 +427,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute025:
     extends:
@@ -420,7 +444,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute026:
     extends:
@@ -436,7 +461,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute027:
     extends:
@@ -452,7 +478,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute028:
     extends:
@@ -468,7 +495,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute029:
     extends:
@@ -484,7 +512,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute030:
     extends:
@@ -500,7 +529,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute031:
     extends:
@@ -516,7 +546,8 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 
   compute032:
     extends:
@@ -532,5 +563,6 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 256
+          pids: 1024
+    memswap_limit: 24G
 

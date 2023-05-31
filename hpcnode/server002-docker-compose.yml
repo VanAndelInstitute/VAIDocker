@@ -36,7 +36,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute034:
     extends:
@@ -52,7 +53,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute035:
     extends:
@@ -68,7 +70,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute036:
     extends:
@@ -84,7 +87,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute037:
     extends:
@@ -100,7 +104,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute038:
     extends:
@@ -116,7 +121,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute039:
     extends:
@@ -132,7 +138,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute040:
     extends:
@@ -148,7 +155,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute041:
     extends:
@@ -164,7 +172,8 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 
   compute042:
     extends:
@@ -180,5 +189,6 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 256
+          pids: 2048
+    memswap_limit: 80G
 

@@ -73,6 +73,7 @@ for my $i ($start..$end)
           cpus: "$cpus"
           memory: $memory\G
           pids: $pids
+    memswap_limit: $memory\G
 
 EOF
 ;
