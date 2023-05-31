@@ -22,71 +22,37 @@ services:
       - 9001:9001
     restart: always
 
-  compute057:
+  compute051:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute057
-    hostname: compute057
+    container_name: compute051
+    hostname: compute051
     networks:
       computenet:
-        ipv4_address: 10.152.223.57
+        ipv4_address: 10.152.223.51
     deploy:
       resources:
         limits:
-          cpus: "40"
-          memory: 200G
+          cpus: "64"
+          memory: 400G
           pids: 10280
-    memswap_limit: 200G
+    memswap_limit: 400G
 
-  compute058:
+  compute052:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute058
-    hostname: compute058
+    container_name: compute052
+    hostname: compute052
     networks:
       computenet:
-        ipv4_address: 10.152.223.58
+        ipv4_address: 10.152.223.52
     deploy:
       resources:
         limits:
-          cpus: "40"
-          memory: 200G
+          cpus: "64"
+          memory: 400G
           pids: 10280
-    memswap_limit: 200G
-
-  compute059:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute059
-    hostname: compute059
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.59
-    deploy:
-      resources:
-        limits:
-          cpus: "40"
-          memory: 200G
-          pids: 10280
-    memswap_limit: 200G
-
-  compute060:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute060
-    hostname: compute060
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.60
-    deploy:
-      resources:
-        limits:
-          cpus: "40"
-          memory: 200G
-          pids: 10280
-    memswap_limit: 200G
+    memswap_limit: 400G
 
