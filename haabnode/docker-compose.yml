@@ -17,13 +17,15 @@ services:
       # Authentication we use SSSD.
       - /var/run/nscd/socket:/var/run/nscd/socket
       - /etc/krb5.conf:/etc/krb5.conf
-      - /etc/pam.d:/etc/pam.d
+      - /etc/pam.d:/etc/pam.d:ro
       - /var/lib/sss/pipes:/var/lib/sss/pipes
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      #- /sys/fs/cgroup:/sys/fs/cgroup:rw
+      # WORKAROUND FOR CGROUPSV2 and system. make sure to bindmount cgroups rw and then mount that, not /sys/fs/groups directly.
+      - /run/docker_cgroup_haab/sys/fs/cgroup:/sys/fs/cgroup:rw
 
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
-      - /data/data:/data:rw
+      #- /data/data:/data:rw
 
       - /varidata/research/projects/haab:/varidata/research/projects/haab:ro
       - /varidata/research/software:/varidata/research/software/:ro
@@ -33,9 +35,10 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
 
+    tmpfs: /run
 
 
     ports:
       - 22000-22100:22000-22100
 
-    restart: always
+    restart: no
