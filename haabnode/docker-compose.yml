@@ -7,38 +7,34 @@ services:
     hostname: rstudio
     network_mode: bridge
     privileged: false
-    cap_add:
-      - SYS_ADMIN
-      - DAC_READ_SEARCH
+#    cap_add:
+#      - SYS_ADMIN
+#      - DAC_READ_SEARCH
     environment:
       - TZ=America/Detroit
-    image: vaibbc/rstudio:R4.2
+    image: vaibbc/rstudio:R4.2_nosystemd
     volumes:
       # Authentication we use SSSD.
-      - /var/run/nscd/socket:/var/run/nscd/socket
-      - /etc/krb5.conf:/etc/krb5.conf
-      - /etc/pam.d:/etc/pam.d:ro
+      - /etc/krb5.conf:/etc/krb5.conf:ro
       - /var/lib/sss/pipes:/var/lib/sss/pipes
-      #- /sys/fs/cgroup:/sys/fs/cgroup:rw
-      # WORKAROUND FOR CGROUPSV2 and system. make sure to bindmount cgroups rw and then mount that, not /sys/fs/groups directly.
-      - /run/docker_cgroup_haab/sys/fs/cgroup:/sys/fs/cgroup:rw
 
       # Authentication cannot mount individual files, because the mapping is
       # based on the inode
-      #- /data/data:/data:rw
+      - /localdisk/data:/data
 
       - /varidata/research/projects/haab:/varidata/research/projects/haab:ro
-      - /varidata/research/software:/varidata/research/software/:ro
-      - /varidata/research/clustermgmt/shared-ha/modulefiles:/cm/shared/modulefiles:ro
-
+      - /varidata/research/software:/varidata/research/software:ro
+      - /varidata/research/clustermgmt/bright92/shared:/cm/shared:rw
+      - /varidata/research/clustermgmt/shared-ha/modulefiles/bbc:/cm/shared/modulefiles/bbc:rw
+      - /tmp:/var/tmp:rw
+      
       # TIMEZONE
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
 
     tmpfs: /run
 
-
     ports:
       - 22000-22100:22000-22100
 
-    restart: no
+    restart: always

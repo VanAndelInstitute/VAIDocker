@@ -7,9 +7,9 @@ services:
     hostname: rstudio
     network_mode: bridge
     privileged: false
-    cap_add:
-      - SYS_ADMIN
-      - DAC_READ_SEARCH
+#    cap_add:
+#      - SYS_ADMIN
+#      - DAC_READ_SEARCH
     environment:
       - TZ=America/Detroit
     image: vaibbc/rstudio:R4.2_nosystemd
