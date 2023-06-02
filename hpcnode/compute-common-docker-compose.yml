@@ -32,6 +32,7 @@ services:
       - /cm/local:/cm/local
       - /etc:/etc/etc.server:ro
       - /varidata/research/clustermgmt/vaihpc/slurm/etc:/usr/local/etc:rw
+      - /localdisk:/localdisk:rw
       
     tmpfs:
       - /run
