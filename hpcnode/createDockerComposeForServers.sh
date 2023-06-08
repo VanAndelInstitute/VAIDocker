@@ -43,3 +43,5 @@
 ./generateComputeNodeEntries.pl --start 107 --end 107 --cpus 40 --memory 200 --pidlimit -1 --interface eth2 > server043-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 108 --end 108 --cpus 40 --memory 200 --pidlimit -1 --interface eth2 > server044-docker-compose.yml
 ##./generateComputeNodeEntries.pl --start 109 --end 109 --cpus 40 --memory 280 --pidlimit -1 --interface eth2 > server045-docker-compose.yml
+./generateComputeNodeEntries.pl --start 110 --end 110 --cpus 16 --memory 400 --pidlimit -1 --interface eth2 > server046-docker-compose.yml
+./generateComputeNodeEntries.pl --start 111 --end 111 --cpus 64 --memory 200 --pidlimit -1 --interface eth2 > server047-docker-compose.yml
