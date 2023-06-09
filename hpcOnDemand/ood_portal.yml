@@ -40,6 +40,10 @@ servername: ondemand001.hpc.vai.org
 #       - 'SSLCertificateKeyFile "/etc/pki/tls/private/www.example.com.key"'
 # Default: null (no SSL support)
 #ssl: null
+ssl:
+  - 'SSLCertificateFile "/etc/pki/tls/certs/ondemand.vai.org.crt"'
+  - 'SSLCertificateKeyFile "/etc/pki/tls/private/ondemand.vai.org.key"'
+  - 'SSLCertificateChainFile "/etc/pki/tls/certs/ondemand.vai.org-interm.crt"'
 
 # Root directory of log files (can be relative ServerRoot)
 # Example:
@@ -449,10 +453,7 @@ rnode_uri: /rnode
 #    dir: /usr/share/ondemand-dex/web
 
 auth:
-  - 'AuthType Basic'
-  - 'AuthName "Open OnDemand"'
-  - 'AuthBasicProvider PAM'
-  - 'AuthPAMService ood'
+  - 'AuthType Mellon'
   - 'Require valid-user'
 # Capture system user name from authenticated user name
 #user_map_cmd: "/opt/ood/ood_auth_map/bin/ood_auth_map.regex"
