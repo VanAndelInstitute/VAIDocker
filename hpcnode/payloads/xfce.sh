@@ -14,6 +14,9 @@ fi
 xfconf-query -c xfce4-session -p /startup/ssh-agent/enabled -n -t bool -s false
 xfconf-query -c xfce4-session -p /startup/gpg-agent/enabled -n -t bool -s false
 
+#custom scrensaver options
+cp /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/xfce4-screensaver.xml ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screensaver.xml
+
 # Disable useless services on autostart
 AUTOSTART="${HOME}/.config/autostart"
 rm -fr "${AUTOSTART}"    # clean up previous autostarts

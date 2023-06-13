@@ -1,0 +1,40 @@
+version: '3.1'
+
+services:
+
+  alma9:
+    container_name: rstudio_alma9
+    hostname: rstudio
+    network_mode: bridge
+    privileged: false
+#    cap_add:
+#      - SYS_ADMIN
+##      - DAC_READ_SEARCH
+    environment:
+      - TZ=America/Detroit
+    image: vaibbc/rstudio:R4.2_nosystemd
+    volumes:
+      # Authentication we use SSSD.
+      - /etc/krb5.conf:/etc/krb5.conf:ro
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+
+      # Authentication cannot mount individual files, because the mapping is
+      # based on the inode
+      - /localdisk/data:/data:rw
+
+      - /varidata/research/projects/jones/projects/JJANG:/varidata/research/projects/jones/projects/JJANG:ro
+      - /varidata/research/software:/varidata/research/software:ro
+      - /varidata/research/clustermgmt/bright92/shared:/cm/shared:ro
+      - /varidata/research/clustermgmt/shared-ha/modulefiles/bbc:/cm/shared/modulefiles/bbc:ro
+      - /tmp:/var/tmp:rw
+      
+      # TIMEZONE
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+
+    tmpfs: /run
+
+    ports:
+      - 22000-22100:22000-22100
+
+    restart: always

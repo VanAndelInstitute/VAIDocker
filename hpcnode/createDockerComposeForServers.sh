@@ -20,6 +20,7 @@
 ./generateComputeNodeEntries.pl --start 86 --end 86 --cpus 128 --memory 820 --pidlimit -1 --interface eth2 > server019-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 87 --end 87 --cpus 128 --memory 820 --pidlimit -1 --interface eth2 > server020-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 88 --end 88 --cpus 128 --memory 820 --pidlimit -1 --interface eth2 > server021-docker-compose.yml
+./generateComputeNodeEntries.pl --start 113 --end 113 --cpus 128 --memory 820 --pidlimit -1 --interface eth2 > server022-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 84 --end 84 --cpus 28 --memory 200 --pidlimit -1 --interface eth2 > server023-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 85 --end 85 --cpus 28 --memory 200 --pidlimit -1 --interface eth2 > server024-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 89 --end 89 --cpus 28 --memory 200 --pidlimit -1 --interface eth2 > server025-docker-compose.yml
@@ -45,3 +46,4 @@
 ##./generateComputeNodeEntries.pl --start 109 --end 109 --cpus 40 --memory 280 --pidlimit -1 --interface eth2 > server045-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 110 --end 110 --cpus 16 --memory 400 --pidlimit -1 --interface eth2 > server046-docker-compose.yml
 ./generateComputeNodeEntries.pl --start 111 --end 111 --cpus 64 --memory 200 --pidlimit -1 --interface eth2 > server047-docker-compose.yml
+./generateComputeNodeEntries.pl --start 112 --end 112 --cpus 64 --memory 400 --pidlimit -1 --interface eth2 > server048-docker-compose.yml
