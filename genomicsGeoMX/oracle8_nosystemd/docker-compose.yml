@@ -1,0 +1,50 @@
+version: '3.1'
+
+#networks:
+#computenet:
+#   name: hpcnode_computenet
+#   external: true
+
+services:
+
+  pipeline:
+    container_name: genomics_geomx
+    hostname: genomicsgeomx
+    network_mode: bridge
+#    networks:
+#      computenet:
+#        ipv4_address: 10.152.223.249
+    privileged: false
+#    used for allowing cifs mounts within countainer
+#    cap_add:
+#      - SYS_ADMIN
+#      - DAC_READ_SEARCH
+    image: vanandelinstitute/genomics_geomx:nosystemd_clean
+    volumes:
+      # Authentication we use SSSD.
+      #      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf
+      #- /etc/pam.d:/etc/pam.d
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      #- /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+      # Authentication cannot mount individual files, because the mapping is
+      # based on the inode
+
+      - /varidata/research/projects/genomicscore:/varidata/research/projects/genomicscore:rw
+      - /varidata/research/projects/genomicscore:/genomicscore:rw
+      - /varidata/research/instruments/sequencing:/varidata/research/instruments/sequencing:rw
+      - /varidata/research/instruments/sequencing:/sequencing:rw
+      - /varidata/research/software/GeoMxNGSPipeline/Linux_2.3.3.10/:/var/GeoMxNGSPipeline:rw
+      - /tmp:/var/tmp:rw
+
+    ports:
+      - 22100:22100
+      - 5000:5000
+
+    tmpfs:
+      - /run
+      - /run/lock
+      - /tmp
+
+    restart: always
