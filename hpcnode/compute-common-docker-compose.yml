@@ -33,6 +33,8 @@ services:
       - /etc:/etc/etc.server:ro
       - /varidata/research/clustermgmt/vaihpc/slurm/etc:/usr/local/etc:rw
       - /localdisk:/localdisk:rw
+      - /legacy:/legacy:rw
+      - /cloudstorage:/cloudstorage:rw
       
     tmpfs:
       - /run
