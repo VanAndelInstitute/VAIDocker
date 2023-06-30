@@ -31,7 +31,7 @@ openmpi openmpi-devel python3-devel hostname mvapich2 mvapich2-devel cmake rsync
 python3-websockify xorg-x11-xauth xkbcomp dbus-x11 firefox libtiff libtiff-devel ghostscript libpng-devel \
 libX11-devel bzip2-devel mlocate pcre2-devel gsl-devel postfix s-nail bash-completion fontconfig-devel harfbuzz-devel \
 fribidi-devel libjpeg-turbo-devel nano cairo-devel libXt-devel pango-devel screen sqlite-devel java-1.8.0-openjdk-headless \
-expat-devel udunits2-devel jxrlib-devel  && \
+expat-devel udunits2-devel jxrlib-devel cronie  && \
 #install turboVNC
 wget "https://sourceforge.net/projects/turbovnc/files/3.0.2/turbovnc-3.0.2.x86_64.rpm/download" -O /root/turbovnc.rpm && \
 rpm -ivh --nodeps /root/turbovnc.rpm && \
@@ -49,7 +49,9 @@ mkdir /etc/etc.server && \
 cp /etc/hosts /etc/etc.server/hosts && \
 systemctl enable etcHostsSync.timer && \
 systemctl enable slurmStart.timer && \
-systemctl enable postfix
+systemctl enable postfix && \
+systemctl enable crond
+
 
 COPY payloads/slurmd.service /etc/systemd/system/slurmd.service
 COPY payloads/hpcadmins_sudoers /etc/sudoers.d

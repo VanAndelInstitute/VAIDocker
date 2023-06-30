@@ -4,7 +4,7 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth2
+      parent: eth0
     ipam:
       config:
         - subnet: 10.152.222.0/23
@@ -22,19 +22,19 @@ services:
       - 9001:9001
     restart: always
 
-  compute103:
+  compute115:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute103
-    hostname: compute103
+    container_name: compute115
+    hostname: compute115
     networks:
       computenet:
-        ipv4_address: 10.152.223.103
+        ipv4_address: 10.152.223.115
     deploy:
       resources:
         limits:
-          cpus: "40"
+          cpus: "28"
           memory: 400G
           pids: -1
     memswap_limit: 400G

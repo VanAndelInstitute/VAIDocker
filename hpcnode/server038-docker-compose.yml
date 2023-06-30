@@ -34,8 +34,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "28"
-          memory: 200G
+          cpus: "40"
+          memory: 400G
           pids: -1
-    memswap_limit: 200G
+    memswap_limit: 400G
 

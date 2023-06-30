@@ -24,7 +24,7 @@ while ($dockerFile =~ /(yum\s+install\s.+?)(\n|\&)/gm)
 	push @commands, $1;
 }
 
-print STDERR "The following will run on 10.152.223.$start to 10.152.223.$end:\n\n\t" . join("\n\t", @commands) . "\n";
+print STDERR "The following will run on 10.152.223.$start to 10.152.223.$end:\n\n\t" . join("\n\t", @commands) . " \n";
 print STDERR "\n\npausing for 5 seconds, hit ctrl-c to exit if desired...\n";
 sleep 5;
 
@@ -35,7 +35,7 @@ for my $n ($start..$end)
 	{
 		my $ip = "10.152.223.$n";
 		exit if system("ping -c 1 -W 1  $ip");
-		runcmd("ssh root\@$ip \"" . join(";",@commands) . "\"" );
+		runcmd("ssh root\@$ip \"" . join(";",@commands) . "\""  );
 		exit;
 	}
 }
