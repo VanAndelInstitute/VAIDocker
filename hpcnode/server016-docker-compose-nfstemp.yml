@@ -22,21 +22,20 @@ services:
       - 9001:9001
     restart: always
 
-  compute107:
+  compute081:
     extends:
-      file: compute-common-docker-compose.yml
+      file: compute-common-docker-compose-nfstemp.yml
       service: compute
-    container_name: compute107
-    hostname: compute107
+    container_name: compute081
+    hostname: compute081
     networks:
       computenet:
-        ipv4_address: 10.152.223.107
+        ipv4_address: 10.152.223.81
     deploy:
       resources:
         limits:
-          cpus: "40"
-          memory: 200G
+          cpus: "128"
+          memory: 820G
           pids: -1
-    memswap_limit: 200G
-    shm_size: 50G
+    memswap_limit: 820G
 

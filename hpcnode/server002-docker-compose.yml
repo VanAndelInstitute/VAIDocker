@@ -38,6 +38,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute034:
     extends:
@@ -55,6 +56,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute035:
     extends:
@@ -72,6 +74,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute036:
     extends:
@@ -89,6 +92,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute037:
     extends:
@@ -106,6 +110,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute038:
     extends:
@@ -123,6 +128,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute039:
     extends:
@@ -140,6 +146,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute040:
     extends:
@@ -157,6 +164,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute041:
     extends:
@@ -174,6 +182,7 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 
   compute042:
     extends:
@@ -191,4 +200,5 @@ services:
           memory: 80G
           pids: 2048
     memswap_limit: 80G
+    shm_size: 20G
 

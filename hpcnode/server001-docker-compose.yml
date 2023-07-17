@@ -38,6 +38,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute002:
     extends:
@@ -55,6 +56,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute003:
     extends:
@@ -72,6 +74,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute004:
     extends:
@@ -89,6 +92,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute005:
     extends:
@@ -106,6 +110,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute006:
     extends:
@@ -123,6 +128,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute007:
     extends:
@@ -140,6 +146,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute008:
     extends:
@@ -157,6 +164,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute009:
     extends:
@@ -174,6 +182,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute010:
     extends:
@@ -191,6 +200,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute011:
     extends:
@@ -208,6 +218,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute012:
     extends:
@@ -225,6 +236,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute013:
     extends:
@@ -242,6 +254,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute014:
     extends:
@@ -259,6 +272,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute015:
     extends:
@@ -276,6 +290,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute016:
     extends:
@@ -293,6 +308,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute017:
     extends:
@@ -310,6 +326,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute018:
     extends:
@@ -327,6 +344,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute019:
     extends:
@@ -344,6 +362,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute020:
     extends:
@@ -361,6 +380,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute021:
     extends:
@@ -378,6 +398,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute022:
     extends:
@@ -395,6 +416,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute023:
     extends:
@@ -412,6 +434,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute024:
     extends:
@@ -429,6 +452,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute025:
     extends:
@@ -446,6 +470,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute026:
     extends:
@@ -463,6 +488,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute027:
     extends:
@@ -480,6 +506,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute028:
     extends:
@@ -497,6 +524,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute029:
     extends:
@@ -514,6 +542,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute030:
     extends:
@@ -531,6 +560,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute031:
     extends:
@@ -548,6 +578,7 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 
   compute032:
     extends:
@@ -565,4 +596,5 @@ services:
           memory: 24G
           pids: 1024
     memswap_limit: 24G
+    shm_size: 6G
 

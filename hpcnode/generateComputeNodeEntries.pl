@@ -5,11 +5,12 @@
 
 use Getopt::Long;
 
-my $usage = "usage: generateComputeNodeEnties.pl --start [first node] --end [last node] --cpus [cpus per node] --memory [max mem limit] --pidlimit [max pids] --interface [mlx interface name]\n";
+my $usage = "usage: generateComputeNodeEnties.pl --start [first node] --end [last node] --cpus [cpus per node] --memory [max mem limit] --shmem [max shared mem] --pidlimit [max pids] --interface [mlx interface name]\n";
 my $start;  
 my $end;
 my $cpus;
 my $memory;
+my $shmem;
 my $pids;
 my $interface="eth2";
 
@@ -18,6 +19,7 @@ GetOptions ("start=i" => \$start,    # numeric
             "end=i"   => \$end,      
             "cpus=i"   => \$cpus,      
             "memory=i"   => \$memory,      
+            "shmem=i"   => \$shmem,      
             "pidlimit=i"   => \$pids,      
             "interface=s"   => \$interface)      # string
 || die $usage; 
@@ -26,6 +28,7 @@ die $usage unless $start && $end && $cpus && $memory && $interface;
 $cpus = $cpus || int((128.0 / (1+$end-$start)));
 my $memorySwap = $memory + 1;
 $pids = $pids || -1;
+$shmem = $shmem || int($memory/4);
 print <<EOF
 version: '3.1'
 
@@ -74,6 +77,7 @@ for my $i ($start..$end)
           memory: $memory\G
           pids: $pids
     memswap_limit: $memory\G
+    shm_size: $shmem\G
 
 EOF
 ;

@@ -38,4 +38,5 @@ services:
           memory: 280G
           pids: -1
     memswap_limit: 280G
+    shm_size: 70G
 

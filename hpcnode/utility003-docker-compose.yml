@@ -24,7 +24,7 @@ services:
 
   submit004:
     extends: 
-      file: compute-common-docker-compose.yml
+      file: compute-common-docker-compose-nfs.yml
       service: compute
     container_name: submit004
     hostname: submit004

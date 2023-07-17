@@ -1,0 +1,44 @@
+version: '3.1'
+
+services:
+  compute:
+    privileged: true
+    mem_swappiness: 0
+    oom-score-adj: 1000
+    image: vanandelinstitute/hpc
+    environment:
+      TZ: "America/Detroit"
+
+    volumes:
+      # Authentication we use SSSD.
+      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf
+      - /etc/pam.d:/etc/pam.d
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      - /etc/authselect:/etc/authselect
+      - /varidatanfs/research/clustermgmt/vaihpc/VAIDocker/hpcnode/ssh:/root/.ssh
+      - /varidatanfs/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/sshd_config:/etc/ssh/sshd_config
+      - /varidatanfs/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/sshd_config.d:/etc/ssh/sshd_config.d
+      - /varidatanfs/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_config.d:/etc/ssh/ssh_config.d
+      - /varidatanfs/research/clustermgmt/vaihpc/VAIDocker/hpcnode/limits.d:/etc/security/limits.d
+      - /etc/localtime:/etc/localtime
+
+      # data
+      - /varidatanfs:/varidata:rw
+      - /tmp:/var/tmp:rw
+      - /varidatanfs/research/home:/home:rw
+      - /varidatanfs/research/clustermgmt/bright92/shared:/cm/shared:rw
+      - /varidatanfs/research/clustermgmt/shared-ha/modulefiles/bbc:/cm/shared/modulefiles/bbc:rw
+      - /cm/local:/cm/local
+      - /etc:/etc/etc.server:ro
+      - /varidatanfs/research/clustermgmt/vaihpc/slurm/etc:/usr/local/etc:rw
+      - /localdisk:/localdisk:rw
+      - /legacy:/legacy:rw
+      - /cloudstorage:/cloudstorage:rw
+      
+    tmpfs:
+      - /run
+      - /run/lock
+      - /tmp
+   
+    restart: always
