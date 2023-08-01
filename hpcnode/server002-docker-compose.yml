@@ -36,7 +36,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -54,7 +54,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -72,7 +72,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -90,7 +90,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -108,7 +108,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -126,7 +126,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -144,7 +144,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -162,7 +162,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -180,7 +180,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 
@@ -198,7 +198,7 @@ services:
         limits:
           cpus: "16"
           memory: 80G
-          pids: 2048
+          pids: 4092
     memswap_limit: 80G
     shm_size: 20G
 

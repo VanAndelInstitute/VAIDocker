@@ -4,7 +4,7 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth2
+      parent: eth4
     ipam:
       config:
         - subnet: 10.152.222.0/23
@@ -22,20 +22,21 @@ services:
       - 9001:9001
     restart: always
 
-  compute081:
+  compute097:
     extends:
-      file: compute-common-docker-compose-nfstemp.yml
+      file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute081
-    hostname: compute081
+    container_name: compute097
+    hostname: compute097
     networks:
       computenet:
-        ipv4_address: 10.152.223.81
+        ipv4_address: 10.152.223.97
     deploy:
       resources:
         limits:
-          cpus: "128"
-          memory: 820G
+          cpus: "80"
+          memory: 3000G
           pids: -1
-    memswap_limit: 820G
+    memswap_limit: 3000G
+    shm_size: 750G
 

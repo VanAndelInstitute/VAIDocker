@@ -28,7 +28,7 @@ COPY ondemand-web.repo /etc/yum.repos.d/ondemand-web.repo
 # Install OnDemand
 RUN yum update -y \
     && yum install -y ondemand \
-    && yum install -y mod_authnz_pam \
+    && yum install -y mod_authnz_pam mod_auth_mellon mod_ssl \
     && echo "LoadModule authnz_pam_module modules/mod_authnz_pam.so" > /etc/httpd/conf.modules.d/55-authnz_pam.conf
 RUN mkdir -p /etc/ood/config/clusters.d
 COPY slurm_cluster.yml /etc/ood/config/clusters.d/hpc.yml
@@ -40,18 +40,15 @@ COPY hpc-desktop.yml /etc/ood/config/apps/bc_desktop/hpc.yml
 COPY ood_portal.yml /etc/ood/config/ood_portal.yml
 COPY proxy.conf /etc/httpd/conf.d/proxy.conf
 RUN /opt/ood/ood-portal-generator/sbin/update_ood_portal
+COPY xfce.sh /var/www/ood/apps/sys/bc_desktop/template/desktops/xfce.sh
+COPY ondemand.vai.org.crt /etc/pki/tls/certs/ondemand.vai.org.crt
+COPY ondemand.vai.org.key /etc/pki/tls/private/ondemand.vai.org.key
+COPY ondemand.vai.org-interm.crt /etc/pki/tls/certs/ondemand.vai.org-interm.crt
+COPY 00-mellon.conf /etc/httpd/conf.d/00-mellon.conf
+COPY mellon_create_metadata.sh /usr/libexec/mod_auth_mellon/mellon_create_metadata.sh
+COPY vnc.html /var/www/ood/apps/sys/dashboard/public/noVNC-1.3.0/vnc.html
    
 
-# Systemd
-#ZR RUN yum -y install systemd; yum clean all; \
-#ZR     (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
-#ZR     rm -f /lib/systemd/system/multi-user.target.wants/*; \
-#ZR     rm -f /etc/systemd/system/*.wants/*;\
-#ZR     rm -f /lib/systemd/system/local-fs.target.wants/*; \
-#ZR     rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
-#ZR     rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
-#ZR    rm -f /lib/systemd/system/basic.target.wants/*; \
-#ZR     rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 #ZR RUN systemctl enable sshd.service
 RUN systemctl enable httpd

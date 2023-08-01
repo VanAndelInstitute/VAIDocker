@@ -36,7 +36,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -54,7 +54,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -72,7 +72,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -90,7 +90,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -108,7 +108,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -126,7 +126,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -144,7 +144,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -162,7 +162,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -180,7 +180,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -198,7 +198,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -216,7 +216,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -234,7 +234,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -252,7 +252,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -270,7 +270,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -288,7 +288,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -306,7 +306,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -324,7 +324,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -342,7 +342,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -360,7 +360,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -378,7 +378,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -396,7 +396,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -414,7 +414,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -432,7 +432,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -450,7 +450,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -468,7 +468,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -486,7 +486,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -504,7 +504,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -522,7 +522,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -540,7 +540,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -558,7 +558,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -576,7 +576,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 
@@ -594,7 +594,7 @@ services:
         limits:
           cpus: "8"
           memory: 24G
-          pids: 1024
+          pids: 4092
     memswap_limit: 24G
     shm_size: 6G
 

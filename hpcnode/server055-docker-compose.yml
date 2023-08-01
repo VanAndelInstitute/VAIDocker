@@ -4,7 +4,7 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth2
+      parent: eth0
     ipam:
       config:
         - subnet: 10.152.222.0/23
@@ -34,9 +34,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "48"
-          memory: 400G
+          cpus: "40"
+          memory: 350G
           pids: -1
-    memswap_limit: 400G
+    memswap_limit: 350G
     shm_size: 256G
 

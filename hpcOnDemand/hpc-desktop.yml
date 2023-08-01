@@ -2,6 +2,12 @@
 ---
 title: "hpc"
 cluster: "hpc"
-# attributes:
-#   desktop: "xfce"
-#   bc_queue: "quick"
+attributes:
+   desktop: "xfce"
+   bc_account:
+   bc_num_slots: 1
+   bc_num_hours:
+      value: 24
+   bc_queue:
+      value: "quick"
+   bc_email_on_started:
