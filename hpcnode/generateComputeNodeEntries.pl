@@ -29,6 +29,7 @@ $cpus = $cpus || int((128.0 / (1+$end-$start)));
 my $memorySwap = $memory + 1;
 $pids = $pids || -1;
 $shmem = $shmem || int($memory/4);
+$tmpSize = int($memory/3);
 print <<EOF
 version: '3.1'
 
@@ -70,6 +71,11 @@ for my $i ($start..$end)
     networks:
       computenet:
         ipv4_address: 10.152.223.$i
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: $tmpSize\G
     deploy:
       resources:
         limits:

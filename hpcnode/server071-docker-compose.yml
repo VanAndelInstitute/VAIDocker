@@ -22,26 +22,26 @@ services:
       - 9001:9001
     restart: always
 
-  compute103:
+  compute122:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute103
-    hostname: compute103
+    container_name: compute122
+    hostname: compute122
     networks:
       computenet:
-        ipv4_address: 10.152.223.103
+        ipv4_address: 10.152.223.122
     volumes:
       - type: tmpfs
         target: /tmp
         tmpfs:
-          size: 133G
+          size: 333G
     deploy:
       resources:
         limits:
-          cpus: "40"
-          memory: 400G
+          cpus: "52"
+          memory: 1000G
           pids: -1
-    memswap_limit: 400G
-    shm_size: 100G
+    memswap_limit: 1000G
+    shm_size: 1000G
 

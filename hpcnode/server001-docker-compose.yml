@@ -31,6 +31,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.1
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -49,6 +54,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.2
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -67,6 +77,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.3
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -85,6 +100,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.4
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -103,6 +123,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.5
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -121,6 +146,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.6
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -139,6 +169,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.7
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -157,6 +192,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.8
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -175,6 +215,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.9
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -193,6 +238,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.10
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -211,6 +261,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.11
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -229,6 +284,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.12
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -247,6 +307,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.13
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -265,6 +330,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.14
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -283,6 +353,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.15
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -301,6 +376,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.16
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -319,6 +399,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.17
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -337,6 +422,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.18
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -355,6 +445,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.19
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -373,6 +468,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.20
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -391,6 +491,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.21
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -409,6 +514,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.22
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -427,6 +537,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.23
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -445,6 +560,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.24
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -463,6 +583,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.25
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -481,6 +606,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.26
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -499,6 +629,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.27
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -517,6 +652,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.28
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -535,6 +675,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.29
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -553,6 +698,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.30
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -571,6 +721,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.31
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:
@@ -589,6 +744,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.32
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 8G
     deploy:
       resources:
         limits:

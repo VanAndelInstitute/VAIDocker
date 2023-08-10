@@ -39,6 +39,6 @@ services:
     tmpfs:
       - /run
       - /run/lock
-      - /tmp
+        # - /tmp
    
     restart: always

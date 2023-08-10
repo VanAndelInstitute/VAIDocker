@@ -31,6 +31,11 @@ services:
     networks:
       computenet:
         ipv4_address: 10.152.223.99
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 66G
     deploy:
       resources:
         limits:
