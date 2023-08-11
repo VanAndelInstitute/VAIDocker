@@ -58,3 +58,4 @@ COPY payloads/hpcadmins_sudoers /etc/sudoers.d
 COPY payloads/main.cf  /etc/postfix/main.cf
 COPY payloads/rsyslog.scheduler.conf /etc/rsyslog.d/rsyslog.scheduler.conf
 COPY payloads/xfce.sh /opt/TurboVNC/bin/xstartup.turbovnc
+COPY payloads/singularity.conf /etc/singularity/singularity.conf
