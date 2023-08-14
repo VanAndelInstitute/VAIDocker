@@ -4,7 +4,7 @@
 
 [Unit]
 Description=make sure slurm is running in docker every 15-30 minutes
-Wants=etcHostsSync.timer
+Wants=slurmStart.timer
 
 [Service]
 Type=oneshot
