@@ -4,10 +4,14 @@ systemctl start sshd
 systemctl start rsyslog
 systemctl start systemd-user-sessions
 
+#fix tmp noexec to exec
+perl /root/fixTmp.pl
+
 #MUNGE
 cp /varidata/research/clustermgmt/vaihpc/munge/munge.key /etc/munge
 chown munge /etc/munge/munge.key
 systemctl start	munge
+
 
 sleep 20
 if [ "$HOSTNAME" =  "slurm" ]; then
