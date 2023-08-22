@@ -1,0 +1,23 @@
+# /etc/ood/config/clusters.d/slurm_cluster.yml
+---
+v2:
+  metadata:
+    title: "hpc"
+  login:
+    host: "access.hpc.vai.org"
+  job:
+    adapter: "slurm"
+    cluster: "hpc"
+    bin: "/usr/local/bin"
+    conf: "/usr/local/etc/slurm.conf"
+  batch_connect:
+    basic:
+      script_wrapper: |
+        module purge
+        %s
+    vnc:
+      script_wrapper: |
+        module purge
+        export PATH="/opt/TurboVNC/bin:$PATH"
+        export WEBSOCKIFY_CMD="/usr/bin/websockify"
+        %s
