@@ -13,7 +13,7 @@
 # Example:
 #     servername: 'www.example.com'
 # Default: null (don't use name-based Virtual Host)
-servername: ondemand001.hpc.vai.org
+servername: ondemand.hpc.vai.org
 
 # The server aliases used for the name-based Virtual Host
 # Example:
@@ -453,7 +453,11 @@ rnode_uri: /rnode
 #    dir: /usr/share/ondemand-dex/web
 
 auth:
-  - 'AuthType Mellon'
+  #  - 'AuthType Mellon'
+  - 'AuthType Basic'
+  - 'AuthName "Open OnDemand"'
+  - 'AuthBasicProvider PAM'
+  - 'AuthPAMService ood'
   - 'Require valid-user'
 # Capture system user name from authenticated user name
 #user_map_cmd: "/opt/ood/ood_auth_map/bin/ood_auth_map.regex"

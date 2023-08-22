@@ -1,0 +1,2 @@
+# /etc/ood/config/apps/dashboard/env
+OOD_DASHBOARD_SUPPORT_URL="mailto:hpc3@vai.org?subject=HPCOnDemand issue"

@@ -1,0 +1,11 @@
+pinned_apps:
+  - sys/bc_desktop/hpc
+  - 'sys/shell*'
+  - 'sys/f*'
+  - 'sys/sh_rstudio'
+pinned_apps_menu_length: 10
+dashboard_title: "VAI HPC OnDemand"
+dashboard_logo: "/public/vai/logo.png"
+brand_bg_color: "#005596"
+public_url: "/var/www/ood/public/vai/favicon.ico"
+dashboard_header_img_logo: "/public/vai/logo.png"

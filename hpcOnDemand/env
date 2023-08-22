@@ -1,2 +1,0 @@
-# /etc/ood/config/apps/shell/env
-OOD_SSHHOST_ALLOWLIST="access.hpc.vai.org"
