@@ -49,6 +49,7 @@ COPY payloads/certs/ondemand.vai.org-interm.crt /etc/pki/tls/certs/ondemand.vai.
 COPY payloads/saml/mellon_create_metadata.sh /usr/libexec/mod_auth_mellon/mellon_create_metadata.sh
 COPY payloads/vnc.html /var/www/ood/apps/sys/dashboard/public/noVNC-1.3.0/vnc.html
 COPY payloads/oodRstudio/sh_rstudio /var/www/ood/apps/sys/sh_rstudio
+COPY payloads/oodRstudio/ondemand_codeserver /var/www/ood/apps/sys/ondmeand_codeserver
 COPY payloads/branding /var/www/ood/public/vai
 COPY payloads/ondemand.d /etc/ood/config/ondemand.d
 COPY payloads/ood.rb /etc/ood/config/apps/dashboard/initializers/
