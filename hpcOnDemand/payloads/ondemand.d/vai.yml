@@ -3,6 +3,7 @@ pinned_apps:
   - 'sys/shell*'
   - 'sys/f*'
   - 'sys/sh_rstudio'
+  - 'sys/ondmeand_codeserver'
 pinned_apps_menu_length: 10
 dashboard_title: "VAI HPC OnDemand"
 dashboard_logo: "/public/vai/logo.png"
