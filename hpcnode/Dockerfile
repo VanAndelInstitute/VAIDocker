@@ -32,7 +32,7 @@ python3-websockify xorg-x11-xauth xkbcomp dbus-x11 firefox libtiff libtiff-devel
 libX11-devel bzip2-devel mlocate pcre2-devel gsl-devel postfix s-nail bash-completion fontconfig-devel harfbuzz-devel \
 fribidi-devel libjpeg-turbo-devel nano cairo-devel libXt-devel pango-devel screen sqlite-devel java-1.8.0-openjdk-headless \
 expat-devel udunits2-devel jxrlib-devel cronie ncurses-compat-libs libpq-devel lapack-devel armadillo-devel tcllib gdal-devel \
-tcl-devel tk-devel proj-devel geos-devel texlive-texlive.infra && \
+tcl-devel tk-devel proj-devel geos-devel texlive-texlive.infra thunar-archive-plugin && \
 #install turboVNC
 wget "https://sourceforge.net/projects/turbovnc/files/3.0.2/turbovnc-3.0.2.x86_64.rpm/download" -O /root/turbovnc.rpm && \
 rpm -ivh --nodeps /root/turbovnc.rpm && \
