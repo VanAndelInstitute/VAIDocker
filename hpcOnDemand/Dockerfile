@@ -45,11 +45,11 @@ COPY payloads/xfce.sh /var/www/ood/apps/sys/bc_desktop/template/desktops/xfce.sh
 COPY payloads/certs/ondemand.vai.org.crt /etc/pki/tls/certs/ondemand.vai.org.crt
 COPY payloads/certs/ondemand.vai.org.key /etc/pki/tls/private/ondemand.vai.org.key
 COPY payloads/certs/ondemand.vai.org-interm.crt /etc/pki/tls/certs/ondemand.vai.org-interm.crt
-#COPY payloads/saml/00-mellon.conf /etc/httpd/conf.d/00-mellon.conf
+COPY payloads/saml/00-mellon.conf /etc/httpd/conf.d/00-mellon.conf
 COPY payloads/saml/mellon_create_metadata.sh /usr/libexec/mod_auth_mellon/mellon_create_metadata.sh
 COPY payloads/vnc.html /var/www/ood/apps/sys/dashboard/public/noVNC-1.3.0/vnc.html
 COPY payloads/oodRstudio/sh_rstudio /var/www/ood/apps/sys/sh_rstudio
-COPY payloads/oodRstudio/ondemand_codeserver /var/www/ood/apps/sys/ondmeand_codeserver
+COPY payloads/oodRstudio/ondemand_codeserver /var/www/ood/apps/sys/ondemand_codeserver
 COPY payloads/branding /var/www/ood/public/vai
 COPY payloads/ondemand.d /etc/ood/config/ondemand.d
 COPY payloads/ood.rb /etc/ood/config/apps/dashboard/initializers/
