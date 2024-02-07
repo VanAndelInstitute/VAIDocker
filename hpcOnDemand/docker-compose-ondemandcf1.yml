@@ -1,0 +1,35 @@
+version: '3.1'
+
+networks:
+  computenet:
+     name:  hpcondemand_computenet
+     external: true
+
+services:
+  ondemandcf:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: ondemandcf1
+    hostname: ondemand1.vai.zone
+    volumes:
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/payloads/saml/ondemandcf1_mellon:/etc/httpd/mellon:rw
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/payloads/ood_portal_ondemandcf1.yml:/etc/ood/config/ood_portal.yml:ro
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.242
+    deploy:
+      resources:
+        limits:
+          cpus: "10"
+          memory: 64G
+  cftunnel:
+    container_name: cloudflared-tunnel1
+    image: cloudflare/cloudflared
+    restart: unless-stopped
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.241
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=eyJhIjoiMTNiMjExNTZhMmI0ODcwOTcxMjcxMDI2YjU4YzcwNDgiLCJ0IjoiM2NlNTQ5MjItNTQyNS00ZmU4LWJhNDQtNjA3MzE4ZTljZjhhIiwicyI6Ik16TmlaV0UzTVdVdE5tWXdNaTAwTTJVekxXRTBPR010TW1WaE5XRTRaREZtTURBMiJ9
