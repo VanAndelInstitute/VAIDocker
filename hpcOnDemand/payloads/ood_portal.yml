@@ -25,7 +25,7 @@ servername: ondemand.hpc.vai.org
 # Example:
 #     proxy_server: 'proxy.example.com'
 # Default: The value of servername
-#proxy_server: null
+proxy_server: ondemand.vai.zone
 
 # The port specification for the Virtual Host
 # Example:
@@ -454,11 +454,11 @@ rnode_uri: /rnode
 #    dir: /usr/share/ondemand-dex/web
 
 auth:
-  #  - 'AuthType Mellon'
-  - 'AuthType Basic'
-  - 'AuthName "Open OnDemand"'
-  - 'AuthBasicProvider PAM'
-  - 'AuthPAMService ood'
+  - 'AuthType Mellon'
+    #- 'AuthType Basic'
+    #- 'AuthName "Open OnDemand"'
+    #- 'AuthBasicProvider PAM'
+    #  - 'AuthPAMService ood'
   - 'Require valid-user'
 # Capture system user name from authenticated user name
 #user_map_cmd: "/opt/ood/ood_auth_map/bin/ood_auth_map.regex"
