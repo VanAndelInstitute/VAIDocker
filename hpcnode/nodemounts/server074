@@ -1,0 +1,4 @@
+mkdir /localdisk/data
+mkdir /localdisk/data1
+mount /dev/disk/by-uuid/8a1bd242-01de-4acf-9c55-43a22e505421  /localdisk/data1
+mount /dev/disk/by-path/pci-0000:55:00.0-ata-2-part1 /localdisk/data

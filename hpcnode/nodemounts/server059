@@ -1,0 +1,2 @@
+mkdir /localdisk/data
+mount /dev/disk/by-path/pci-0000:98:00.0-scsi-0:0:13:0-part1 /localdisk/data

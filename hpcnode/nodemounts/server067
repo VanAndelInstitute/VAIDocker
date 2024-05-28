@@ -1,0 +1,10 @@
+dnf install https://zfsonlinux.org/epel/zfs-release-2-3$(rpm --eval "%{dist}").noarch.rpm -y
+yum install zfs -y
+/sbin/modprobe zfs
+zfs mount -a
+zpool import -a
+mkdir /localdisk/data
+zfs set mountpoint=/localdisk/data data
+
+mkdir /localdisk/data1               
+mount /dev/disk/by-path/pci-0000:00:1f.2-ata-3.0-part1 /localdisk/data1

@@ -1,0 +1,5 @@
+mkdir /localdisk/data1
+mount /dev/disk/by-path/pci-0000:00:17.0-ata-2-part1 /localdisk/data1
+
+mkdir /localdisk/data2
+mount /dev/disk/by-path/pci-0000:00:17.0-ata-3-part1 /localdisk/data2
