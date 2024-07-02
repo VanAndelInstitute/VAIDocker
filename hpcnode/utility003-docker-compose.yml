@@ -1,4 +1,8 @@
 version: '3.1'
+# networks:
+#  computenet:
+#     name:  hpcondemand_computenet
+#     external: true
 
 networks:
   computenet:
@@ -22,17 +26,32 @@ services:
       - 9001:9001
     restart: always
 
-  submit004:
+#  submit001:
+#    extends: 
+#      file: compute-common-docker-compose.yml
+#      service: compute
+#    container_name: submit001
+#    hostname: submit001
+#    networks: 
+#      computenet:
+#        ipv4_address: 10.152.223.251
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: "10" 
+#          memory: 80G
+
+  submit003:
     extends: 
-      file: compute-common-docker-compose-nfs.yml
+      file: compute-common-docker-compose.yml
       service: compute
-    container_name: submit004
-    hostname: submit004
+    container_name: submit003
+    hostname: submit003
     networks: 
       computenet:
-        ipv4_address: 10.152.223.248
+        ipv4_address: 10.152.223.247
     deploy:
       resources:
         limits:
-          cpus: "16" 
+          cpus: "10" 
           memory: 100G  

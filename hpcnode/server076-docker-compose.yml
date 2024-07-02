@@ -4,7 +4,7 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth2
+      parent: eth1
     ipam:
       config:
         - subnet: 10.152.222.0/23
@@ -22,17 +22,26 @@ services:
       - 9001:9001
     restart: always
 
-  submit002:
-    extends: 
+  compute140:
+    extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: submit002
-    hostname: submit002
-    networks: 
+    container_name: compute140
+    hostname: compute140
+    networks:
       computenet:
-        ipv4_address: 10.152.223.252
+        ipv4_address: 10.152.223.140
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 80G
     deploy:
       resources:
         limits:
-          cpus: "10" 
-          memory: 100G  
+          cpus: "48"
+          memory: 240G
+          pids: -1
+    memswap_limit: 240G
+    shm_size: 240G
+

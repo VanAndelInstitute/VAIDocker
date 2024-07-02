@@ -4,12 +4,21 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth2
+      parent: eth0
     ipam:
       config:
         - subnet: 10.152.222.0/23
           gateway: 10.152.222.1
           ip_range: 10.152.223.0/24
+  ipminet:
+    driver: ipvlan
+    driver_opts:
+      parent: eth1
+    ipam:
+      config:
+        - subnet: 10.148.222.0/24
+          gateway: 10.148.222.1
+          ip_range: 10.148.222.0/24
 
 services:
   portainer-agent:
@@ -22,17 +31,28 @@ services:
       - 9001:9001
     restart: always
 
-  submit002:
-    extends: 
+  compute133:
+    extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: submit002
-    hostname: submit002
-    networks: 
+    container_name: compute133
+    hostname: compute133
+    networks:
       computenet:
-        ipv4_address: 10.152.223.252
+        ipv4_address: 10.152.223.133
+      ipminet:
+        ipv4_address: 10.148.222.249
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 21G
     deploy:
       resources:
         limits:
-          cpus: "10" 
-          memory: 100G  
+          cpus: "8"
+          memory: 64G
+          pids: -1
+    memswap_limit: 64G
+    shm_size: 64G
+

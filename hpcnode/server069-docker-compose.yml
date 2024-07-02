@@ -22,17 +22,26 @@ services:
       - 9001:9001
     restart: always
 
-  submit002:
-    extends: 
+  compute136:
+    extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: submit002
-    hostname: submit002
-    networks: 
+    container_name: compute136
+    hostname: compute136
+    networks:
       computenet:
-        ipv4_address: 10.152.223.252
+        ipv4_address: 10.152.223.136
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 233G
     deploy:
       resources:
         limits:
-          cpus: "10" 
-          memory: 100G  
+          cpus: "48"
+          memory: 700G
+          pids: -1
+    memswap_limit: 700G
+    shm_size: 700G
+
