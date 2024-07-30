@@ -1,0 +1,5 @@
+mkdir /localdisk/data
+mkdir /localdisk/data1
+mount /dev/disk/by-path/pci-0000:76:00.0-nvme-1 /localdisk/data1
+
+mount /dev/disk/by-path/pci-0000:75:00.0-nvme-1 /localdisk/data

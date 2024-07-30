@@ -32,10 +32,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.33
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute033:/tmp:rw
     deploy:
       resources:
         limits:
@@ -55,10 +52,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.34
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute034:/tmp:rw
     deploy:
       resources:
         limits:
@@ -78,10 +72,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.35
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute035:/tmp:rw
     deploy:
       resources:
         limits:
@@ -101,10 +92,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.36
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute036:/tmp:rw
     deploy:
       resources:
         limits:
@@ -124,10 +112,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.37
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute037:/tmp:rw
     deploy:
       resources:
         limits:
@@ -147,10 +132,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.38
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute038:/tmp:rw
     deploy:
       resources:
         limits:
@@ -170,10 +152,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.39
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute039:/tmp:rw
     deploy:
       resources:
         limits:
@@ -193,10 +172,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.40
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute040:/tmp:rw
     deploy:
       resources:
         limits:
@@ -216,10 +192,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.41
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute041:/tmp:rw
     deploy:
       resources:
         limits:
@@ -239,10 +212,7 @@ services:
       computenet:
         ipv4_address: 10.152.223.42
     volumes:
-      - type: tmpfs
-        target: /tmp
-        tmpfs:
-          size: 26G
+      - /localdisk/tmp/compute042:/tmp:rw
     deploy:
       resources:
         limits:

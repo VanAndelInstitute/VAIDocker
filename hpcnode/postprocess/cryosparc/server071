@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ $HOSTNAME == "server"* ]]; then
+	compute=$(bash /varidata/research/clustermgmt/hpcnode/s2c.sh $HOSTNAME)
+	echo $compute
+	docker exec $compute bash /varidata/research/clustermgmt/hpcnode/postprocess/cryosparc/$HOSTNAME
+else
+	su - cryosparc_lu /localdisk/data1/cryosparc/cryosparc_master/bin/cryosparcm start
+fi
