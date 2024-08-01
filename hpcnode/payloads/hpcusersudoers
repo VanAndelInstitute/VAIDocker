@@ -1,0 +1,16 @@
+
+
+#commands to ipmi power manage
+Cmnd_Alias POWER_MGMT_CMDS = /usr/bin/ipmitool power status, /usr/bin/ipmitool power cycle
+
+#Huilin Self manage node restarts
+Host_Alias HUILIN_NODES = compute114, compute115, compute116, compute117, compute118, compute119, compute120, compute131, compute132, compute134, compute138, compute139, compute140
+%hli.lab-modify  HUILIN_NODES = (root) NOPASSWD: POWER_MGMT_CMDS
+
+#cryoem self manage node restarts
+Host_Alias CRYOEM_NODES = compute136, compute137
+%cryoem.core CRYOEM_NODES = (root) NOPASSWD: POWER_MGMT_CMDS
+
+#bbc self manage node restarts
+Host_Alias BBC_NODES = compute086, compute087, compute088, compute097, compute113
+%bbc-modify BBC_NODES = (root) NOPASSWD: POWER_MGMT_CMDS
