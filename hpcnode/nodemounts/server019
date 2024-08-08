@@ -1,0 +1,10 @@
+if ! [ -e /dev/disk/by-path/pci-0000:01:00.0-scsi-0:2:4:0-part1 ]; then
+	parted -a optimal /dev/disk/by-path/pci-0000:01:00.0-scsi-0:2:4:0 mklabel gpt
+	sleep 5
+	parted -a optimal /dev/disk/by-path/pci-0000:01:00.0-scsi-0:2:4:0 mkpart primary 0% 100%
+	sleep 5
+	mkfs.xfs /dev/disk/by-path/pci-0000:01:00.0-scsi-0:2:4:0-part1
+	sleep 5
+fi
+mkdir /localdisk/tmp
+mount /dev/disk/by-path/pci-0000:01:00.0-scsi-0:2:4:0-part1 /localdisk/tmp
