@@ -34,7 +34,7 @@ fribidi-devel libjpeg-turbo-devel nano cairo-devel libXt-devel pango-devel scree
 expat-devel udunits2-devel jxrlib-devel cronie ncurses-compat-libs libpq-devel lapack-devel armadillo-devel tcllib gdal-devel \
 tcl-devel tk-devel proj-devel geos-devel texlive-texlive.infra thunar-archive-plugin ristretto perl-IPC-Cmd mesa-libGLU \
 fftw-devel libsodium-devel glpk-devel texlive texlive-pdflscape texlive-multirow jemalloc-devel libatomic_ops-devel \
-graphviz-devel libzstd-devel  gmp-devel netcdf-devel gv ipmitool && \
+graphviz-devel libzstd-devel  gmp-devel netcdf-devel gv ipmitool evince && \
 #install turboVNC
 wget "https://sourceforge.net/projects/turbovnc/files/3.0.2/turbovnc-3.0.2.x86_64.rpm/download" -O /root/turbovnc.rpm && \
 rpm -ivh --nodeps /root/turbovnc.rpm && \
@@ -58,6 +58,7 @@ systemctl enable crond
 
 COPY payloads/slurmd.service /etc/systemd/system/slurmd.service
 COPY payloads/hpcadmins_sudoers /etc/sudoers.d
+COPY payloads/hpcusersudoers /etc/sudoers.d
 COPY payloads/main.cf  /etc/postfix/main.cf
 COPY payloads/rsyslog.scheduler.conf /etc/rsyslog.d/rsyslog.scheduler.conf
 COPY payloads/xfce.sh /opt/TurboVNC/bin/xstartup.turbovnc
