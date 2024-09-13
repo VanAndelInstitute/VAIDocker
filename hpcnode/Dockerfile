@@ -53,7 +53,8 @@ cp /etc/hosts /etc/etc.server/hosts && \
 systemctl enable etcHostsSync.timer && \
 systemctl enable slurmStart.timer && \
 systemctl enable postfix && \
-systemctl enable crond
+systemctl enable crond && \
+echo ReadKMsg=no >> /etc/systemd/journald.conf
 
 
 COPY payloads/slurmd.service /etc/systemd/system/slurmd.service
