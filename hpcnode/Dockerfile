@@ -61,7 +61,7 @@ COPY payloads/slurmd.service /etc/systemd/system/slurmd.service
 COPY payloads/hpcadmins_sudoers /etc/sudoers.d
 COPY payloads/hpcusersudoers /etc/sudoers.d
 COPY payloads/main.cf  /etc/postfix/main.cf
-COPY payloads/rsyslog.scheduler.conf /etc/rsyslog.d/rsyslog.scheduler.conf
+COPY payloads/rsyslog.graylog.conf /etc/rsyslog.d/rsyslog.graylog.conf
 COPY payloads/xfce.sh /opt/TurboVNC/bin/xstartup.turbovnc
 COPY payloads/singularity.conf /etc/singularity/singularity.conf
 COPY payloads/fixTmp.pl /root/fixTmp.pl
