@@ -2,10 +2,13 @@
 ---
 title: "hpc desktop"
 cluster: "hpc"
+submit: "submit/submit.yml.erb"
 attributes:
    desktop: "xfce"
    bc_account:
-   bc_num_slots: 1
+   bc_num_slots:
+      label: "Number of cores"
+      value: 1
    bc_num_hours:
       value: 24
    bc_queue:

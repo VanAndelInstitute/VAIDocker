@@ -1,0 +1,6 @@
+# /etc/ood/config/apps/bc_desktop/submit/submit.yml.erb
+---
+script:
+  native:
+    - "-n"
+    - "<%= bc_num_slots.blank? ? 1 : bc_num_slots.to_i %>"
