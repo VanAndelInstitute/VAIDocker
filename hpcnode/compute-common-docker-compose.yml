@@ -32,7 +32,11 @@ services:
       - /cm/local:/cm/local
       - /etc:/etc/etc.server:ro
       - /varidata/research/clustermgmt/vaihpc/slurm/etc:/usr/local/etc:rw
-      - /localdisk:/localdisk:rw
+      - type: bind
+        source: /localdisk
+        target: /localdisk
+        bind:
+          propagation: rslave
       - /legacy:/legacy:rw
       - /cloudstorage:/cloudstorage:rw
       
