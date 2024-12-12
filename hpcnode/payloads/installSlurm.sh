@@ -1,6 +1,6 @@
  #!/bin/bash
  cd /root
- SLURMVER=22.05.0
+ SLURMVER=24.11.0
  wget https://download.schedmd.com/slurm/slurm-$SLURMVER.tar.bz2
  tar -jxvf slurm-$SLURMVER.tar.bz2
  cd slurm-$SLURMVER
