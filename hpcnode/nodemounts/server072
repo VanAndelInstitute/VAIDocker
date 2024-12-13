@@ -1,0 +1,17 @@
+if ! mountpoint -q /localdisk/data 
+then
+	dnf install https://zfsonlinux.org/epel/zfs-release-2-3$(rpm --eval "%{dist}").noarch.rpm -y
+	yum install zfs -y
+	/sbin/modprobe zfs
+	zfs mount -a
+	zpool import -a
+	mkdir /localdisk/data
+	zfs set mountpoint=/localdisk/data data
+fi
+
+
+if ! mountpoint -q /localdisk/data1 
+then
+	mkdir /localdisk/data1               
+	mount /dev/disk/by-path/pci-0000:00:11.5-ata-5.0-part1 /localdisk/data1
+fi

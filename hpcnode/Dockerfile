@@ -66,3 +66,4 @@ COPY payloads/xfce.sh /opt/TurboVNC/bin/xstartup.turbovnc
 COPY payloads/singularity.conf /etc/singularity/singularity.conf
 COPY payloads/fixTmp.pl /root/fixTmp.pl
 COPY payloads/nohomedir.sh /etc/profile.d/nohomedir.sh
+COPY payloads/main_job.sh /var/www/ood/apps/sys/myjobs/example_templates/default/main_job.sh

@@ -7,4 +7,4 @@ mkdir /localdisk/data
 zfs set mountpoint=/localdisk/data data
 
 mkdir /localdisk/data1
-                                                                                                  mount /dev/disk/by-path/pci-0000:d8:00.0-scsi-0:0:12:0-part1 /localdisk/data1
+mount /dev/disk/by-path/pci-0000:d8:00.0-scsi-0:0:12:0-part1 /localdisk/data1
