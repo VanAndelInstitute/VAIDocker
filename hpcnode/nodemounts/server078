@@ -1,6 +1,6 @@
 #mounts go here
 #mkdir -p /localdisk/nvmeof1
-#mountpoint -q /localdisk/nvmeof1 || nvme connect -t tcp -a 10.152.220.29 -s 4420 -n nqn.2020-05.com.graidtech:GRAID-SR7098CC8D872ABD17:dg0vd0 -v
+#mountpoint -q /localdisk/nvmeof1 || nvme connect -t tcp -a 10.152.220.29 -s 4420 -n nqn.2020-05.com.graidtech:GRAID-SR7098CC8D872ABD17:dg0vd1 -v
 #sleep 5 
 #mountpoint -q /localdisk/nvmeof1 || mount /dev/nvme2n1p1  /localdisk/nvmeof1
 mkdir -p /localdisk/data

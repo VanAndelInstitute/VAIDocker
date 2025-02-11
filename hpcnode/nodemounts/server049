@@ -3,8 +3,8 @@ yum install zfs -y
 /sbin/modprobe zfs
 zfs mount -a
 zpool import -a
-mkdir /localdisk/data
+mkdir -p /localdisk/data
 zfs set mountpoint=/localdisk/data data
 
-mkdir /localdisk/data1               
-mount /dev/disk/by-path/pci-0000:00:17.0-ata-2.0-part1 /localdisk/data1
+mkdir -p /localdisk/data1               
+mountpoint -q /localdisk/data1 || mount /dev/disk/by-path/pci-0000:00:17.0-ata-2.0-part1 /localdisk/data1

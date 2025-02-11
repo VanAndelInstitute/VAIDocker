@@ -7,4 +7,4 @@ mkdir -p /localdisk/data
 zfs set mountpoint=/localdisk/data data
 
 mkdir -p /localdisk/data1               
-mount /dev/disk/by-path/pci-0000:43:00.0-ata-2-part1 /localdisk/data1
+mountpoint -q /localdisk/data1 || mount /dev/disk/by-path/pci-0000:43:00.0-ata-2-part1 /localdisk/data1

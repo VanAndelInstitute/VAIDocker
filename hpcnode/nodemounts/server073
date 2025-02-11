@@ -1,5 +1,5 @@
-mkdir /localdisk/data
-mount /dev/disk/by-path/pci-0000:75:00.0-nvme-1-part1 /localdisk/data
+mkdir -p /localdisk/data
+mountpoint -q /localdisk/data || mount /dev/disk/by-path/pci-0000:75:00.0-nvme-1-part1 /localdisk/data
 
-mkdir /localdisk/data1
-mount /dev/disk/by-path/pci-0000:76:00.0-nvme-1 /localdisk/data1
+mkdir -p /localdisk/data1
+mountpoint -q /localdisk/data1 || mount /dev/disk/by-path/pci-0000:76:00.0-nvme-1 /localdisk/data1

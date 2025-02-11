@@ -1,5 +1,5 @@
-mkdir /localdisk/data
-mount /dev/disk/by-path/pci-0000:55:00.0-ata-2-part1 /localdisk/data
+mkdir -p /localdisk/data
+mountpoint -q /localdisk/data || mount /dev/disk/by-path/pci-0000:55:00.0-ata-2-part1 /localdisk/data
 
-mkdir /localdisk/data1
-mount /dev/md127 /localdisk/data1
+mkdir -p /localdisk/data1
+mountpoint -q /localdisk/data1 || mount /dev/md127 /localdisk/data1
