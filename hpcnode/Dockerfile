@@ -66,3 +66,4 @@ COPY payloads/xfce.sh /opt/TurboVNC/bin/xstartup.turbovnc
 COPY payloads/singularity.conf /etc/singularity/singularity.conf
 COPY payloads/fixTmp.pl /root/fixTmp.pl
 COPY payloads/nohomedir.sh /etc/profile.d/nohomedir.sh
+COPY payloads/environment.gpunode /etc/environment.gpunode
