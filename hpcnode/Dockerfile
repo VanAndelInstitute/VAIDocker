@@ -33,7 +33,7 @@ libX11-devel bzip2-devel mlocate pcre2-devel gsl-devel postfix s-nail bash-compl
 fribidi-devel libjpeg-turbo-devel nano cairo-devel libXt-devel pango-devel screen sqlite-devel java-1.8.0-openjdk-headless \
 expat-devel udunits2-devel jxrlib-devel cronie ncurses-compat-libs libpq-devel lapack-devel armadillo-devel tcllib gdal-devel \
 tcl-devel tk-devel proj-devel geos-devel texlive-texlive.infra thunar-archive-plugin ristretto perl-IPC-Cmd mesa-libGLU \
-fftw-devel libsodium-devel glpk-devel texlive texlive-pdflscape texlive-multirow jemalloc-devel libatomic_ops-devel \
+fftw-devel libsodium-devel glpk-devel texlive texlive-pdflscape texlive-multirow jemalloc-devel libatomic_ops-devel mesa-libGL-devel \
 graphviz-devel libzstd-devel  gmp-devel netcdf-devel gv ipmitool evince mousepad mpfr-devel xcb-util-cursor mesa-libOSMesa gedit \
 VirtualGL-devel libdb-devel xarchiver && \
 #install turboVNC
