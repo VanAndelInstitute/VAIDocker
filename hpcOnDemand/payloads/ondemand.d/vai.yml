@@ -7,7 +7,10 @@ pinned_apps:
   - 'sys/ondemand_codeserver'
 pinned_apps_menu_length: 10
 dashboard_title: "VAI HPC OnDemand"
-dashboard_logo: "/public/vai/logo.png"
+dashboard_logo: "/public/vai/vailogobig.png"
+dashboard_logo_height: "200px"
+disable_dashboard_logo: true
 brand_bg_color: "#005596"
 public_url: "/var/www/ood/public/vai/favicon.ico"
 dashboard_header_img_logo: "/public/vai/logo.png"
+bc_dynamic_js: true
