@@ -2,7 +2,7 @@ version: '3.1'
 
 networks:
   computenet:
-     name:  hpcondemand_computenet
+     name:  hpcnode_computenet
      external: true
 
 services:

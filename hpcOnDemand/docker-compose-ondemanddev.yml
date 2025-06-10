@@ -6,18 +6,18 @@ networks:
      external: true
 
 services:
-  ondemandcf:
+  ondemanddev:
     extends:
       file: ondemand4-common-docker-compose.yml
       service: compute
-    container_name: ondemandcf3
-    hostname: ondemandcf3.hpc.vai.org
+    container_name: ondemanddev
+    hostname: ondemanddev.hpc.vai.org
     volumes:
-      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/payloads/saml/ondemandcf3_mellon:/etc/httpd/mellon:rw
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/payloads/saml/ondemanddev_mellon:/etc/httpd/mellon:rw
 #      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/payloads/ood_portal_ondemandcf3.yml:/etc/ood/config/ood_portal.yml:ro
     networks:
       computenet:
-        ipv4_address: 10.152.223.250
+        ipv4_address: 10.152.223.249
     deploy:
       resources:
         limits:

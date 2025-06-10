@@ -4,7 +4,7 @@ services:
   compute:
     privileged: true
     #image: vanandelinstitute/ondemand:20231101
-    image: ondemand:20241212
+    image: ondemand:20250609
      #build: ./
       
     environment:

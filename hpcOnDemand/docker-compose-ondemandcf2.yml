@@ -8,13 +8,13 @@ networks:
 services:
   ondemandcf:
     extends:
-      file: compute-common-docker-compose.yml
+      file: ondemand4-common-docker-compose.yml
       service: compute
     container_name: ondemandcf2
     hostname: ondemand2.vai.zone
     volumes:
       - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/payloads/saml/ondemandcf2_mellon:/etc/httpd/mellon:rw
-      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/payloads/ood_portal_ondemandcf2.yml:/etc/ood/config/ood_portal.yml:ro
+        #      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcOnDemand/payloads/ood_portal_ondemandcf2.yml:/etc/ood/config/ood_portal.yml:ro
     networks:
       computenet:
         ipv4_address: 10.152.223.244
@@ -23,13 +23,13 @@ services:
         limits:
           cpus: "10"
           memory: 64G
-  cftunnel:
-    container_name: cloudflared-tunnel2
-    image: cloudflare/cloudflared
-    restart: unless-stopped
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.243
-    command: tunnel run
-    environment:
-      - TUNNEL_TOKEN=eyJhIjoiMTNiMjExNTZhMmI0ODcwOTcxMjcxMDI2YjU4YzcwNDgiLCJ0IjoiZjc0M2VhNTktMjM5NS00YWZkLTk2Y2UtYjliZjdkMjg4YWE3IiwicyI6Ik1HTmpZalJqTlRNdE56WXhNQzAwTVdVNUxXSTNOekV0TnpnME9HWTNPRGd4TkRSaSJ9
+#  cftunnel:
+#    container_name: cloudflared-tunnel2
+#    image: cloudflare/cloudflared
+#    restart: unless-stopped
+#    networks:
+#      computenet:
+#        ipv4_address: 10.152.223.243
+#    command: tunnel run
+#    environment:
+#      - TUNNEL_TOKEN=eyJhIjoiMTNiMjExNTZhMmI0ODcwOTcxMjcxMDI2YjU4YzcwNDgiLCJ0IjoiZjc0M2VhNTktMjM5NS00YWZkLTk2Y2UtYjliZjdkMjg4YWE3IiwicyI6Ik1HTmpZalJqTlRNdE56WXhNQzAwTVdVNUxXSTNOekV0TnpnME9HWTNPRGd4TkRSaSJ9

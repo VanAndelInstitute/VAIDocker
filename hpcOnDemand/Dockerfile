@@ -27,9 +27,9 @@ FROM vanandelinstitute/hpc
 
 # Install OnDemand
 RUN yum update -y && \
-dnf -y module enable ruby:3.1 nodejs:18 && \
-yum install -y https://yum.osc.edu/ondemand/3.1/ondemand-release-web-3.1-1.el9.noarch.rpm && \
-yum install -y ondemand 
+dnf -y module enable ruby:3.3 nodejs:20 && \ 
+yum install -y https://yum.osc.edu/ondemand/4.0/ondemand-release-web-4.0-1.el9.noarch.rpm && \
+yum -y install ondemand
 RUN yum install -y mod_authnz_pam mod_auth_mellon mod_ssl \
     && echo "LoadModule authnz_pam_module modules/mod_authnz_pam.so" > /etc/httpd/conf.modules.d/55-authnz_pam.conf
 RUN mkdir -p /etc/ood/config/clusters.d
