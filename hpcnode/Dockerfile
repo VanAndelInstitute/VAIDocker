@@ -35,7 +35,7 @@ expat-devel udunits2-devel jxrlib-devel cronie ncurses-compat-libs libpq-devel l
 tcl-devel tk-devel proj-devel geos-devel texlive-texlive.infra thunar-archive-plugin ristretto perl-IPC-Cmd mesa-libGLU \
 fftw-devel libsodium-devel glpk-devel texlive texlive-pdflscape texlive-multirow jemalloc-devel libatomic_ops-devel mesa-libGL-devel \
 graphviz-devel libzstd-devel  gmp-devel netcdf-devel gv ipmitool evince mousepad mpfr-devel xcb-util-cursor mesa-libOSMesa gedit \
-VirtualGL-devel libdb-devel xarchiver libgit2-devel && \
+VirtualGL-devel libdb-devel xarchiver libgit2-devel libwebp-devel && \
 #install turboVNC
 wget "https://sourceforge.net/projects/turbovnc/files/3.0.2/turbovnc-3.0.2.x86_64.rpm/download" -O /root/turbovnc.rpm && \
 rpm -ivh --nodeps /root/turbovnc.rpm && \
