@@ -5,7 +5,7 @@ services:
     privileged: true
     mem_swappiness: 0
     oom-score-adj: 1000
-    image: vanandelinstitute/hpc
+    image: vaihpc/hpc
     environment:
       TZ: "America/Detroit"
 
