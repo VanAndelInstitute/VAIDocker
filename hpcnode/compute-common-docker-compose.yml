@@ -4,7 +4,7 @@ services:
   compute:
     privileged: true
     mem_swappiness: 0
-    oom-score-adj: 1000
+    #oom-score-adj: 1000
     image: vaihpc/hpc
     environment:
       TZ: "America/Detroit"
