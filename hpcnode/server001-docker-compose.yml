@@ -22,446 +22,6 @@ services:
       - 9001:9001
     restart: always
 
-  compute001:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute001
-    hostname: compute001
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.1
-    volumes:
-      - /localdisk/tmp/compute001:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute002:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute002
-    hostname: compute002
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.2
-    volumes:
-      - /localdisk/tmp/compute002:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute003:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute003
-    hostname: compute003
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.3
-    volumes:
-      - /localdisk/tmp/compute003:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute004:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute004
-    hostname: compute004
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.4
-    volumes:
-      - /localdisk/tmp/compute004:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute005:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute005
-    hostname: compute005
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.5
-    volumes:
-      - /localdisk/tmp/compute005:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute006:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute006
-    hostname: compute006
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.6
-    volumes:
-      - /localdisk/tmp/compute006:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute007:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute007
-    hostname: compute007
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.7
-    volumes:
-      - /localdisk/tmp/compute007:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute008:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute008
-    hostname: compute008
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.8
-    volumes:
-      - /localdisk/tmp/compute008:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute009:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute009
-    hostname: compute009
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.9
-    volumes:
-      - /localdisk/tmp/compute009:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute010:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute010
-    hostname: compute010
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.10
-    volumes:
-      - /localdisk/tmp/compute010:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute011:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute011
-    hostname: compute011
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.11
-    volumes:
-      - /localdisk/tmp/compute011:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute012:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute012
-    hostname: compute012
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.12
-    volumes:
-      - /localdisk/tmp/compute012:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute013:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute013
-    hostname: compute013
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.13
-    volumes:
-      - /localdisk/tmp/compute013:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute014:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute014
-    hostname: compute014
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.14
-    volumes:
-      - /localdisk/tmp/compute014:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute015:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute015
-    hostname: compute015
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.15
-    volumes:
-      - /localdisk/tmp/compute015:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute016:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute016
-    hostname: compute016
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.16
-    volumes:
-      - /localdisk/tmp/compute016:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute017:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute017
-    hostname: compute017
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.17
-    volumes:
-      - /localdisk/tmp/compute017:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute018:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute018
-    hostname: compute018
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.18
-    volumes:
-      - /localdisk/tmp/compute018:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute019:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute019
-    hostname: compute019
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.19
-    volumes:
-      - /localdisk/tmp/compute019:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute020:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute020
-    hostname: compute020
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.20
-    volumes:
-      - /localdisk/tmp/compute020:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute021:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute021
-    hostname: compute021
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.21
-    volumes:
-      - /localdisk/tmp/compute021:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
-  compute022:
-    extends:
-      file: compute-common-docker-compose.yml
-      service: compute
-    container_name: compute022
-    hostname: compute022
-    networks:
-      computenet:
-        ipv4_address: 10.152.223.22
-    volumes:
-      - /localdisk/tmp/compute022:/tmp:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "8"
-          memory: 24G
-          pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
-
   compute023:
     extends:
       file: compute-common-docker-compose.yml
@@ -476,11 +36,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute024:
     extends:
@@ -496,11 +56,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute025:
     extends:
@@ -516,11 +76,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute026:
     extends:
@@ -536,11 +96,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute027:
     extends:
@@ -556,11 +116,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute028:
     extends:
@@ -576,11 +136,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute029:
     extends:
@@ -596,11 +156,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute030:
     extends:
@@ -616,11 +176,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute031:
     extends:
@@ -636,11 +196,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 
   compute032:
     extends:
@@ -656,9 +216,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "8"
-          memory: 24G
+          cpus: "16"
+          memory: 80G
           pids: 4092
-    memswap_limit: 24G
-    shm_size: 6G
+    memswap_limit: 80G
+    shm_size: 20G
 

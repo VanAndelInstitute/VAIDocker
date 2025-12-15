@@ -4,7 +4,7 @@ networks:
   computenet:
     driver: ipvlan
     driver_opts:
-      parent: eth2
+      parent: eth4
     ipam:
       config:
         - subnet: 10.152.222.0/23
@@ -28,6 +28,9 @@ services:
       service: compute
     container_name: compute130
     hostname: compute130
+    security_opt:
+      - seccomp:unconfined
+      - systempaths=unconfined
     networks:
       computenet:
         ipv4_address: 10.152.223.130
@@ -36,9 +39,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "28"
-          memory: 375G
+          cpus: "192"
+          memory: 760G
           pids: -1
-    memswap_limit: 375G
-    shm_size: 375G
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    memswap_limit: 760G
+    shm_size: 760G
 

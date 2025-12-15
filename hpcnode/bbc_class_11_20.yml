@@ -1,0 +1,208 @@
+version: '3.1'
+
+networks:
+  extcomputenet:
+    name: hpcnode_computenet
+    external: true    
+
+services:
+  compute160:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute160
+    hostname: compute160
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.160
+    volumes:
+      - /localdisk/tmp/compute160:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute161:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute161
+    hostname: compute161
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.161
+    volumes:
+      - /localdisk/tmp/compute161:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute162:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute162
+    hostname: compute162
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.162
+    volumes:
+      - /localdisk/tmp/compute162:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute163:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute163
+    hostname: compute163
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.163
+    volumes:
+      - /localdisk/tmp/compute163:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute164:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute164
+    hostname: compute164
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.164
+    volumes:
+      - /localdisk/tmp/compute164:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute165:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute165
+    hostname: compute165
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.165
+    volumes:
+      - /localdisk/tmp/compute165:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute166:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute166
+    hostname: compute166
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.166
+    volumes:
+      - /localdisk/tmp/compute166:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute167:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute167
+    hostname: compute167
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.167
+    volumes:
+      - /localdisk/tmp/compute167:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute168:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute168
+    hostname: compute168
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.168
+    volumes:
+      - /localdisk/tmp/compute168:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+
+  compute169:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute169
+    hostname: compute169
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.169
+    volumes:
+      - /localdisk/tmp/compute169:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 20G
+          pids: -1
+    memswap_limit: 20G
+    shm_size: 5G
+

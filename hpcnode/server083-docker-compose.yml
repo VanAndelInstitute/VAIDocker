@@ -22,23 +22,22 @@ services:
       - 9001:9001
     restart: always
 
-  compute129:
+  compute147:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute129
-    hostname: compute129
+    container_name: compute147
+    hostname: compute147
     networks:
       computenet:
-        ipv4_address: 10.152.223.129
+        ipv4_address: 10.152.223.147
     volumes:
-      - /localdisk/tmp/compute129:/tmp:rw
+      - /localdisk/tmp/compute147:/tmp:rw
     deploy:
       resources:
         limits:
           cpus: "192"
-          memory: 760G
+          memory: 1150G
           pids: -1
-    memswap_limit: 760G
-    shm_size: 760G
-
+    memswap_limit: 1150G
+    shm_size: 1150G

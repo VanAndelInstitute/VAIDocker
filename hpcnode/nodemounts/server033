@@ -1,0 +1,3 @@
+mkdir -p /localdisk/data
+
+mountpoint -q /localdisk/data || mount /dev/md127 /localdisk/data

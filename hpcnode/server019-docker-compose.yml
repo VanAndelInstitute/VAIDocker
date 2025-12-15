@@ -37,8 +37,8 @@ services:
       resources:
         limits:
           cpus: "128"
-          memory: 820G
+          memory: 760G
           pids: -1
-    memswap_limit: 820G
-    shm_size: 205G
+    memswap_limit: 760G
+    shm_size: 190G
 

@@ -28,6 +28,9 @@ services:
       service: compute
     container_name: compute125
     hostname: compute125
+    security_opt:
+      - seccomp:unconfined
+      - systempaths=unconfined
     networks:
       computenet:
         ipv4_address: 10.152.223.125
@@ -39,6 +42,10 @@ services:
           cpus: "28"
           memory: 350G
           pids: -1
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     memswap_limit: 350G
     shm_size: 350G
-
