@@ -1,0 +1,35 @@
+version: '3.1'
+
+networks:
+  computenet:
+    driver: ipvlan
+    driver_opts:
+      parent: ztxoojo3ot
+    ipam:
+      config:
+        - subnet: 10.152.222.0/23
+          gateway: 10.152.222.1
+          ip_range: 10.152.223.0/24
+
+services:
+
+  compute190:
+    extends:
+      file: compute-common-docker-compose-aws.yml
+      service: compute
+    container_name: compute190
+    hostname: compute190
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.190
+    volumes:
+      - /localdisk/tmp/compute190:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 10G
+          pids: -1
+    memswap_limit: 10G
+    shm_size: 10G
+
