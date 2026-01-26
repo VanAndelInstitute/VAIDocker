@@ -4,4 +4,4 @@
 #sleep 5 
 #mountpoint -q /localdisk/nvmeof1 || mount /dev/nvme2n1p1  /localdisk/nvmeof1
 mkdir -p /localdisk/data
-mountpoint -q /localdisk/data || mount /dev/disk/by-path/pci-0000:24:00.0-nvme-1-part1  /localdisk/data
+mountpoint -q /localdisk/data || mount /dev/disk/by-path/pci-0000:24:00.0-nvme-1-part3  /localdisk/data
