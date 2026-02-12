@@ -7,7 +7,7 @@ Cmnd_Alias POWER_MGMT_CMDS = /usr/bin/ipmitool power status, /usr/bin/ipmitool p
 Cmnd_Alias NVIDIA_MGMT_CMDS = /cm/shared/apps/cuda12.5/visual-tools/12.5.1/bin/ncu
 
 #Huilin Self manage node restarts
-Host_Alias HUILIN_NODES = compute114, compute115, compute116, compute117, compute118, compute119, compute120, compute131, compute132, compute134, compute138, compute139, compute140, compute142
+Host_Alias HUILIN_NODES = compute114, compute115, compute116, compute117, compute118, compute119, compute120, compute131, compute132, compute134, compute138, compute139, compute140, compute141, compute142
 %hli.lab-modify  HUILIN_NODES = (root) NOPASSWD: POWER_MGMT_CMDS
 
 #cryoem self manage node restarts
