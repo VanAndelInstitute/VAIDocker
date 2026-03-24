@@ -4,5 +4,5 @@ if [[ $HOSTNAME == "server"* ]]; then
 	echo $compute
 	docker exec $compute bash /varidata/research/clustermgmt/hpcnode/postprocess/cryosparc/$HOSTNAME
 else
-	su - evan.worden /localdisk/data1/cryosparc/cryosparc_master/bin/cryosparcm start
+	su - cryosparc_worden /localdisk/data1/cryosparc/cryosparc_master/bin/cryosparcm start
 fi
