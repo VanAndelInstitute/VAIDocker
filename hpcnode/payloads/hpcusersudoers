@@ -22,3 +22,5 @@ Host_Alias BBC_NODES = compute086, compute087, compute088, compute097, compute11
 Host_Alias JANG_SHEN_NODES =  compute112, compute143, compute147
 %shen.lab-modify JANG_SHEN_NODES = (root) NOPASSWD: NVIDIA_MGMT_CMDS
 %jang.lab-modify JANG_SHEN_NODES = (root) NOPASSWD: NVIDIA_MGMT_CMDS
+%shen.lab-modify JANG_SHEN_NODES = (root) NOPASSWD: POWER_MGMT_CMDS
+%jang.lab-modify JANG_SHEN_NODES = (root) NOPASSWD: POWER_MGMT_CMDS
