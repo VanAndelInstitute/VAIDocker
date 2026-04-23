@@ -332,7 +332,8 @@ unknown_local_recipient_reject_code = 550
 #relayhost = $mydomain
 #relayhost = [gateway.my.domain]
 #relayhost = [mailserver.isp.tld]
-relayhost = [smtp.vai.org]:25
+#relayhost = [smtp.vai.org]:25
+relayhost = [mail.smtp2go.com]:2525
 #relayhost = uucphost
 #relayhost = [an.ip.add.ress]
 
@@ -737,3 +738,13 @@ smtp_tls_CAfile = /etc/pki/tls/certs/ca-bundle.crt
 smtp_tls_security_level = may
 meta_directory = /etc/postfix
 shlib_directory = /usr/lib64/postfix
+
+# enable SASL authentication
+smtp_sasl_auth_enable = yes
+# disallow methods that allow anonymous authentication.
+smtp_sasl_security_options = noanonymous
+# where to find sasl_passwd
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+# Enable STARTTLS encryption
+smtp_use_tls = yes
+
