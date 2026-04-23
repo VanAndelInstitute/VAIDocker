@@ -23,6 +23,11 @@ services:
       - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/limits.d:/etc/security/limits.d
       - /etc/localtime:/etc/localtime
 
+      #postfix
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/postfix/main.cf:/etc/postfix/main.cf
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/postfix/sasl_passwd:/etc/postfix/sasl_passwd
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/postfix/sasl_passwd.db:/etc/postfix/sasl_passwd.db
+
       # data
       - /varidata:/varidata:rw
       - /tmp:/var/tmp:rw
