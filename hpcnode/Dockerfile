@@ -14,7 +14,6 @@ COPY payloads/etcHostsSync.timer /etc/systemd/system
 COPY payloads/slurmStart.service /etc/systemd/system
 COPY payloads/slurmStart.timer /etc/systemd/system
 
-
 RUN yum update -y  && \
 yum install -y yum-utils epel-release && \
 yum groupinstall -y 'Development Tools' && \
@@ -57,7 +56,6 @@ systemctl enable postfix && \
 systemctl enable crond && \
 echo ReadKMsg=no >> /etc/systemd/journald.conf
 
-
 COPY payloads/slurmd.service /etc/systemd/system/slurmd.service
 COPY payloads/hpcadmins_sudoers /etc/sudoers.d
 COPY payloads/hpcusersudoers /etc/sudoers.d
@@ -67,3 +65,7 @@ COPY payloads/singularity.conf /etc/singularity/singularity.conf
 COPY payloads/fixTmp.pl /root/fixTmp.pl
 COPY payloads/nohomedir.sh /etc/profile.d/nohomedir.sh
 COPY payloads/environment.gpunode /etc/environment.gpunode
+
+#add Cisco Umbrelly root CA
+COPY payloads/umbrellaCA.crt /etc/pki/ca-trust/source/anchors
+RUN update-ca-trust extract
