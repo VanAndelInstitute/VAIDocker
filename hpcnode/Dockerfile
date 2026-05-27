@@ -66,6 +66,6 @@ COPY payloads/fixTmp.pl /root/fixTmp.pl
 COPY payloads/nohomedir.sh /etc/profile.d/nohomedir.sh
 COPY payloads/environment.gpunode /etc/environment.gpunode
 
-#add Cisco Umbrelly root CA
+#add Cisco Umbrella root CA
 COPY payloads/umbrellaCA.crt /etc/pki/ca-trust/source/anchors
 RUN update-ca-trust extract
