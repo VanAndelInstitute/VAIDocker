@@ -14,7 +14,6 @@ COPY payloads/etcHostsSync.timer /etc/systemd/system
 COPY payloads/slurmStart.service /etc/systemd/system
 COPY payloads/slurmStart.timer /etc/systemd/system
 
-
 RUN yum update -y  && \
 yum install -y yum-utils epel-release && \
 yum groupinstall -y 'Development Tools' && \
@@ -56,7 +55,6 @@ systemctl enable slurmStart.timer && \
 systemctl enable postfix && \
 systemctl enable crond && \
 echo ReadKMsg=no >> /etc/systemd/journald.conf
-
 
 COPY payloads/slurmd.service /etc/systemd/system/slurmd.service
 COPY payloads/hpcadmins_sudoers /etc/sudoers.d
