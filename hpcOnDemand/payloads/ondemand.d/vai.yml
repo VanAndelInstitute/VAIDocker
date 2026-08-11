@@ -5,12 +5,23 @@ pinned_apps:
   - 'sys/sh_rstudio'
   - 'sys/sh_jupyter'
   - 'sys/ondemand_codeserver'
+  - 'sys/sh_shiny'
+  - 'sys/sh_shiny_bbc'
+  - 'sys/sh_igv'
 pinned_apps_menu_length: 10
 dashboard_title: "VAI HPC OnDemand"
 dashboard_logo: "/public/vai/vailogobig.png"
 dashboard_logo_height: "200px"
 disable_dashboard_logo: true
+dashboard_layout:
+  rows:
+    - columns:
+      - width: 12
+        widgets:
+          - pinned_apps
+          - motd
 brand_bg_color: "#005596"
 public_url: "/var/www/ood/public/vai/favicon.ico"
 dashboard_header_img_logo: "/public/vai/logo.png"
 bc_dynamic_js: true
+cancel_session_enabled: true
