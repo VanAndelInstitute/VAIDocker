@@ -1,4 +1,4 @@
-FROM vanandelinstitute/hpc
+FROM vaihpc/hpc
 
 ### MODIFY ONDEMAND USERNAME AND PASSWORD HERE
 #ZR ENV ONDEMAND_USER ondemand
@@ -27,8 +27,8 @@ FROM vanandelinstitute/hpc
 
 # Install OnDemand
 RUN yum update -y && \
-dnf -y module enable ruby:3.3 nodejs:20 && \ 
-yum install -y https://yum.osc.edu/ondemand/4.0/ondemand-release-web-4.0-1.el9.noarch.rpm && \
+dnf -y module enable ruby:3.3 nodejs:22 && \ 
+yum install -y  https://yum.osc.edu/ondemand/4.1/ondemand-release-web-4.1-1.el9.noarch.rpm && \
 yum -y install ondemand
 RUN yum install -y mod_authnz_pam mod_auth_mellon mod_ssl \
     && echo "LoadModule authnz_pam_module modules/mod_authnz_pam.so" > /etc/httpd/conf.modules.d/55-authnz_pam.conf
@@ -46,6 +46,7 @@ COPY payloads/submit.yml.erb /etc/ood/config/apps/bc_desktop/submit/submit.yml.e
 COPY payloads/ood_portal.yml /etc/ood/config/ood_portal.yml
 COPY payloads/proxy.conf /etc/httpd/conf.d/proxy.conf
 COPY payloads/xfce.sh /var/www/ood/apps/sys/bc_desktop/template/desktops/xfce.sh
+COPY payloads/hpc-desktop-form.yml /var/www/ood/apps/sys/bc_desktop/form.yml
 COPY payloads/certs/ondemand.vai.org.crt /etc/pki/tls/certs/ondemand.vai.org.crt
 COPY payloads/certs/ondemand.vai.org.key /etc/pki/tls/private/ondemand.vai.org.key
 COPY payloads/certs/ondemand.vai.org-interm.crt /etc/pki/tls/certs/ondemand.vai.org-interm.crt
@@ -54,11 +55,15 @@ COPY payloads/saml/mellon_create_metadata.sh /usr/libexec/mod_auth_mellon/mellon
 COPY payloads/vnc.html /var/www/ood/apps/sys/dashboard/public/noVNC-1.3.0/vnc.html
 COPY payloads/oodRstudio/sh_rstudio /var/www/ood/apps/sys/sh_rstudio
 COPY payloads/oodRstudio/sh_jupyter /var/www/ood/apps/sys/sh_jupyter
+COPY payloads/oodRstudio/sh_shiny /var/www/ood/apps/sys/sh_shiny
+COPY payloads/oodRstudio/sh_shiny_bbc /var/www/ood/apps/sys/sh_shiny_bbc
+COPY payloads/oodRstudio/sh_igv /var/www/ood/apps/sys/sh_igv
 COPY payloads/oodRstudio/ondemand_codeserver /var/www/ood/apps/sys/ondemand_codeserver
 COPY payloads/branding /var/www/ood/public/vai
 COPY payloads/ondemand.d /etc/ood/config/ondemand.d
 COPY payloads/ood.rb /etc/ood/config/apps/dashboard/initializers/
 COPY payloads/main_job.sh /var/www/ood/apps/sys/myjobs/example_templates/default/main_job.sh
+COPY payloads/announcement.md /etc/ood/config/announcement.md
 RUN /opt/ood/ood-portal-generator/sbin/update_ood_portal
 
 #ZR RUN systemctl enable sshd.service
