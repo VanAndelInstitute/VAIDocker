@@ -28,7 +28,7 @@ FROM vaihpc/hpc
 # Install OnDemand
 RUN yum update -y && \
 dnf -y module enable ruby:3.3 nodejs:22 && \ 
-yum install -y  https://yum.osc.edu/ondemand/4.1/ondemand-release-web-4.1-1.el9.noarch.rpm && \
+yum install -y  https://yum.osc.edu/ondemand/4.2/ondemand-release-web-4.2-1.el9.noarch.rpm && \
 yum -y install ondemand
 RUN yum install -y mod_authnz_pam mod_auth_mellon mod_ssl \
     && echo "LoadModule authnz_pam_module modules/mod_authnz_pam.so" > /etc/httpd/conf.modules.d/55-authnz_pam.conf
@@ -64,6 +64,7 @@ COPY payloads/ondemand.d /etc/ood/config/ondemand.d
 COPY payloads/ood.rb /etc/ood/config/apps/dashboard/initializers/
 COPY payloads/main_job.sh /var/www/ood/apps/sys/myjobs/example_templates/default/main_job.sh
 COPY payloads/announcement.md /etc/ood/config/announcement.md
+RUN chmod 700 /var/www/ood/apps/sys/module-browser
 RUN /opt/ood/ood-portal-generator/sbin/update_ood_portal
 
 #ZR RUN systemctl enable sshd.service
