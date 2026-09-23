@@ -56,3 +56,26 @@ services:
     memswap_limit: 64G
     shm_size: 64G
 
+  hpcsectest:
+    extends:
+      file: compute-common-docker-compose-security-testing-no-data.yml
+      service: compute
+    container_name: hpcsectest
+    hostname: hpcsectest
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.233
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 11G
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 8G
+          pids: -1
+    memswap_limit: 8G
+    shm_size: 8G
+

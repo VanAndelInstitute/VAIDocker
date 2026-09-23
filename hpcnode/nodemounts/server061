@@ -1,2 +1,4 @@
-mkdir /localdisk/data
-mount /dev/disk/by-path/pci-0000:00:17.0-ata-2-part1 /localdisk/data
+if ! -e /localdisk/cryosparc; then
+	mkdir -p /localdisk/cryosparc
+	cp -r /varidata/research/projects/walton/.cryosparc/cryosparc /localdisk/
+fi

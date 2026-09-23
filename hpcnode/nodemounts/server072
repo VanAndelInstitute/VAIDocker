@@ -1,7 +1,7 @@
 if ! mountpoint -q /localdisk/data 
 then
 	dnf install https://zfsonlinux.org/epel/zfs-release-2-3$(rpm --eval "%{dist}").noarch.rpm -y
-	yum install zfs -y
+	yum install --disableexcludes=all zfs -y
 	/sbin/modprobe zfs
 	zfs mount -a
 	zpool import -a

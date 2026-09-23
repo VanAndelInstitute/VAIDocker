@@ -1,0 +1,55 @@
+version: '3.1'
+
+services:
+  compute:
+    privileged: true
+    mem_swappiness: 0
+    #oom-score-adj: 1000
+    image: vaihpc/hpc
+    environment:
+      TZ: "America/Detroit"
+
+    volumes:
+      # Authentication we use SSSD.
+      - /var/run/nscd/socket:/var/run/nscd/socket
+      - /etc/krb5.conf:/etc/krb5.conf:ro
+      - /etc/pam.d:/etc/pam.d:ro
+      - /usr/lib64/security/pam_nologin.so:/usr/lib64/security/pam_slurm.so:ro
+      - /dev/null:/etc/profile.d/nohomedir.sh:ro
+      - /var/lib/sss/pipes:/var/lib/sss/pipes
+      - /etc/authselect:/etc/authselect:ro
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/hpcsectest/hpcsectest.sudoers:/etc/sudoers.d/hpcsectest
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/ssh:/root/.ssh:ro
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/sshd_config:/etc/ssh/sshd_config:ro
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/sshd_config.d:/etc/ssh/sshd_config.d:ro
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_config.d:/etc/ssh/ssh_config.d:ro
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/limits.d:/etc/security/limits.d:ro
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_rsa_key:/varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_rsa_key:ro
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_ecdsa_key:/varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_ecdsa_key:ro
+      - /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_ed25519_key:/varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/sshd/ssh_host_ed25519_key:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /varidata/research/home/hpc_tanium:/home/hpc_tanium
+
+      # data
+      #      - /varidata:/varidata:rw
+      - /tmp:/var/tmp:rw
+        #- /varidata/research/home:/home:rw
+      - /varidata/research/clustermgmt/bright92/shared:/cm/shared:ro
+      - /varidata/research/clustermgmt/shared-ha/modulefiles/bbc:/cm/shared/modulefiles/bbc:ro
+      - /cm/local:/cm/local:ro
+      - /etc:/etc/etc.server:ro
+      - /varidata/research/clustermgmt/vaihpc/slurm/etc:/usr/local/etc:ro
+      - type: bind
+        source: /localdisk
+        target: /localdisk
+        bind:
+          propagation: rslave
+      - /legacy:/legacy:ro
+      - /cloudstorage:/cloudstorage:ro
+      
+    tmpfs:
+      - /run
+      - /run/lock
+        # - /tmp
+   
+    restart: always

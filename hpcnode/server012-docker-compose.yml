@@ -22,23 +22,203 @@ services:
       - 9001:9001
     restart: always
 
-  compute077:
+  compute001:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute077
-    hostname: compute077
+    container_name: compute001
+    hostname: compute001
     networks:
       computenet:
-        ipv4_address: 10.152.223.77
+        ipv4_address: 10.152.223.1
     volumes:
-      - /localdisk/tmp/compute077:/tmp:rw
+      - /localdisk/tmp/compute001:/tmp:rw
     deploy:
       resources:
         limits:
-          cpus: "128"
-          memory: 760G
-          pids: -1
-    memswap_limit: 760G
-    shm_size: 190G
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute002:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute002
+    hostname: compute002
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.2
+    volumes:
+      - /localdisk/tmp/compute002:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute003:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute003
+    hostname: compute003
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.3
+    volumes:
+      - /localdisk/tmp/compute003:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute004:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute004
+    hostname: compute004
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.4
+    volumes:
+      - /localdisk/tmp/compute004:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute005:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute005
+    hostname: compute005
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.5
+    volumes:
+      - /localdisk/tmp/compute005:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute006:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute006
+    hostname: compute006
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.6
+    volumes:
+      - /localdisk/tmp/compute006:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute007:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute007
+    hostname: compute007
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.7
+    volumes:
+      - /localdisk/tmp/compute007:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute008:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute008
+    hostname: compute008
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.8
+    volumes:
+      - /localdisk/tmp/compute008:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute009:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute009
+    hostname: compute009
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.9
+    volumes:
+      - /localdisk/tmp/compute009:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
+
+  compute010:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute010
+    hostname: compute010
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.10
+    volumes:
+      - /localdisk/tmp/compute010:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "16"
+          memory: 80G
+          pids: 4092
+    memswap_limit: 80G
+    shm_size: 20G
 

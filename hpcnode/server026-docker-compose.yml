@@ -10,7 +10,6 @@ networks:
         - subnet: 10.152.222.0/23
           gateway: 10.152.222.1
           ip_range: 10.152.223.0/24
-
 services:
   portainer-agent:
     container_name: portainer-agent
@@ -22,23 +21,94 @@ services:
       - 9001:9001
     restart: always
 
-  compute090:
+  compute196:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute090
-    hostname: compute090
+    container_name: compute196
+    hostname: compute196
     networks:
       computenet:
-        ipv4_address: 10.152.223.90
+        ipv4_address: 10.152.223.196
     volumes:
-      - /localdisk/tmp/compute090:/tmp:rw
+      - /localdisk/tmp/compute196:/tmp:rw
+      - /dev/null:/dev/nvidia1
+      - /dev/null:/dev/nvidia2
+      - /dev/null:/dev/nvidia3
     deploy:
       resources:
         limits:
-          cpus: "192"
-          memory: 760G
+          cpus: "48"
+          memory: 150G
           pids: -1
-    memswap_limit: 760G
-    shm_size: 190G
+    memswap_limit: 150G
+    shm_size: 150G
 
+  compute197:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute197
+    hostname: compute197
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.197
+    volumes:
+      - /localdisk/tmp/compute197:/tmp:rw
+      - /dev/null:/dev/nvidia0
+      - /dev/null:/dev/nvidia2
+      - /dev/null:/dev/nvidia3
+    deploy:
+      resources:
+        limits:
+          cpus: "48"
+          memory: 150G
+          pids: -1
+    memswap_limit: 150G
+    shm_size: 150G
+
+  compute198:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute198
+    hostname: compute198
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.198
+    volumes:
+      - /localdisk/tmp/compute198:/tmp:rw
+      - /dev/null:/dev/nvidia0
+      - /dev/null:/dev/nvidia1
+      - /dev/null:/dev/nvidia3
+    deploy:
+      resources:
+        limits:
+          cpus: "48"
+          memory: 150G
+          pids: -1
+    memswap_limit: 150G
+    shm_size: 150G
+
+  compute199:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute199
+    hostname: compute199
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.199
+    volumes:
+      - /localdisk/tmp/compute199:/tmp:rw
+      - /dev/null:/dev/nvidia0
+      - /dev/null:/dev/nvidia2
+      - /dev/null:/dev/nvidia1
+    deploy:
+      resources:
+        limits:
+          cpus: "48"
+          memory: 150G
+          pids: -1
+    memswap_limit: 150G
+    shm_size: 150G

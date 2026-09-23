@@ -22,23 +22,42 @@ services:
       - 9001:9001
     restart: always
 
-  compute079:
+  compute059:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute079
-    hostname: compute079
+    container_name: compute059
+    hostname: compute059
     networks:
       computenet:
-        ipv4_address: 10.152.223.79
+        ipv4_address: 10.152.223.59
     volumes:
-      - /localdisk/tmp/compute079:/tmp:rw
+      - /localdisk/tmp/compute059:/tmp:rw
     deploy:
       resources:
         limits:
-          cpus: "128"
-          memory: 760G
-          pids: -1
-    memswap_limit: 760G
-    shm_size: 190G
+          cpus: "64"
+          memory: 380G
+          pids: 10280
+    memswap_limit: 380G
+    shm_size: 95G
 
+  compute060:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute060
+    hostname: compute060
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.60
+    volumes:
+      - /localdisk/tmp/compute060:/tmp:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "64"
+          memory: 380G
+          pids: 10280
+    memswap_limit: 380G
+    shm_size: 95G

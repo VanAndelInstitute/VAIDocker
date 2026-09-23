@@ -1,0 +1,3 @@
+mitchell.gibson ALL=(ALL:ALL) ALL
+jason.kotecki ALL=(ALL:ALL) ALL
+hpc_tanium  ALL=(ALL) NOPASSWD: ALL
