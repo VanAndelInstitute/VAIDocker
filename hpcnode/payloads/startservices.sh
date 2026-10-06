@@ -17,6 +17,9 @@ cp /varidata/research/clustermgmt/vaihpc/munge/munge.key /etc/munge
 chown munge /etc/munge/munge.key
 systemctl start	munge
 
+#add root certs for VAI
+cp -a /varidata/research/clustermgmt/vaihpc/VAIDocker/hpcnode/payloads/umbrellaCA.crt /etc/pki/ca-trust/source/anchors/ 
+update-ca-trust extract
 
 sleep 20
 if [ "$HOSTNAME" =~  "slurm" ]; then
@@ -31,3 +34,5 @@ else
     systemctl enable slurmd
     systemctl start slurmd
 fi
+
+

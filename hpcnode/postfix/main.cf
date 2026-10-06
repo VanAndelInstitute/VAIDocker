@@ -748,3 +748,6 @@ smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
 # Enable STARTTLS encryption
 smtp_use_tls = yes
 
+smtp_generic_maps = hash:/etc/postfix/generic
+#transport_maps = hash:/etc/postfix/transport
+
