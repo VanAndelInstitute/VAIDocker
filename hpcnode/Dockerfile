@@ -60,9 +60,11 @@ echo ReadKMsg=no >> /etc/systemd/journald.conf
 COPY payloads/slurmd.service /etc/systemd/system/slurmd.service
 COPY payloads/hpcadmins_sudoers /etc/sudoers.d
 COPY payloads/hpcusersudoers /etc/sudoers.d
+COPY payloads/01-sudoers-hpcsec /etc/sudoers.d
 COPY payloads/rsyslog.graylog.conf /etc/rsyslog.d/rsyslog.graylog.conf
 COPY payloads/xfce.sh /opt/TurboVNC/bin/xstartup.turbovnc
 COPY payloads/singularity.conf /etc/singularity/singularity.conf
 COPY payloads/fixTmp.pl /root/fixTmp.pl
 COPY payloads/nohomedir.sh /etc/profile.d/nohomedir.sh
 COPY payloads/environment.gpunode /etc/environment.gpunode
+COPY payloads/sysctlsec.conf /etc/sysctl.d/sysctlsec.conf
