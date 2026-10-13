@@ -44,6 +44,7 @@ services:
           propagation: rslave
       - /legacy:/legacy:rw
       - /cloudstorage:/cloudstorage:rw
+      - /varidata/research/software/ai_agents_md:/etc/claude-code:ro
       
     tmpfs:
       - /run
