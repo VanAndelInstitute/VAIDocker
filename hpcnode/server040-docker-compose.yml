@@ -10,6 +10,15 @@ networks:
         - subnet: 10.152.222.0/23
           gateway: 10.152.222.1
           ip_range: 10.152.223.0/24
+  ipminet:
+    driver: ipvlan
+    driver_opts:
+      parent: eth2
+    ipam:
+      config:
+        - subnet: 10.148.222.0/24
+          gateway: 10.148.222.1
+          ip_range: 10.148.222.0/24
 
 services:
   portainer-agent:
@@ -22,17 +31,19 @@ services:
       - 9001:9001
     restart: always
 
-  compute104:
+  compute134:
     extends:
       file: compute-common-docker-compose.yml
       service: compute
-    container_name: compute104
-    hostname: compute104
+    container_name: compute134
+    hostname: compute134
     networks:
       computenet:
-        ipv4_address: 10.152.223.104
+        ipv4_address: 10.152.223.134
+      ipminet:
+        ipv4_address: 10.148.222.247
     volumes:
-      - /localdisk/tmp/compute104:/tmp:rw
+      - /localdisk/tmp/compute134:/tmp:rw
     deploy:
       resources:
         limits:
@@ -41,4 +52,27 @@ services:
           pids: -1
     memswap_limit: 280G
     shm_size: 70G
+
+  hpcsectest:
+    extends:
+      file: compute-common-docker-compose-security-testing-no-data.yml
+      service: compute
+    container_name: hpcsectest
+    hostname: hpcsectest
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.233
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 11G
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 8G
+          pids: -1
+    memswap_limit: 8G
+    shm_size: 8G
 

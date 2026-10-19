@@ -1,0 +1,99 @@
+version: '3.1'
+
+networks:
+  extcomputenet:
+    name: hpcnode_computenet
+    external: true
+
+services:
+  compute153:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute153
+    hostname: compute153
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.153
+    volumes:
+      - /localdisk/tmp/compute153:/tmp:rw
+      - /dev/null:/dev/nvidia1
+      - /dev/null:/dev/nvidia2
+      - /dev/null:/dev/nvidia3
+    deploy:
+      resources:
+        limits:
+          cpus: "10"
+          memory: 150G
+          pids: -1
+    memswap_limit: 150G
+    shm_size: 150G
+
+  compute154:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute154
+    hostname: compute154
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.154
+    volumes:
+      - /localdisk/tmp/compute154:/tmp:rw
+      - /dev/null:/dev/nvidia0
+      - /dev/null:/dev/nvidia2
+      - /dev/null:/dev/nvidia3
+    deploy:
+      resources:
+        limits:
+          cpus: "10"
+          memory: 150G
+          pids: -1
+    memswap_limit: 150G
+    shm_size: 150G
+
+  compute155:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute155
+    hostname: compute155
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.155
+    volumes:
+      - /localdisk/tmp/compute155:/tmp:rw
+      - /dev/null:/dev/nvidia0
+      - /dev/null:/dev/nvidia1
+      - /dev/null:/dev/nvidia3
+    deploy:
+      resources:
+        limits:
+          cpus: "10"
+          memory: 150G
+          pids: -1
+    memswap_limit: 150G
+    shm_size: 150G
+
+  compute156:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute156
+    hostname: compute156
+    networks:
+      extcomputenet:
+        ipv4_address: 10.152.223.156
+    volumes:
+      - /localdisk/tmp/compute156:/tmp:rw
+      - /dev/null:/dev/nvidia0
+      - /dev/null:/dev/nvidia2
+      - /dev/null:/dev/nvidia1
+    deploy:
+      resources:
+        limits:
+          cpus: "10"
+          memory: 150G
+          pids: -1
+    memswap_limit: 150G
+    shm_size: 150G

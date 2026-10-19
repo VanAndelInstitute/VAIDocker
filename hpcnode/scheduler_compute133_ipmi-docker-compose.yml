@@ -1,0 +1,42 @@
+version: '3.1'
+
+networks:
+  computenet:
+    name: hpcnode_computenet
+    external: true
+  ipminet:
+    driver: ipvlan
+    driver_opts:
+      parent: ens224
+    ipam:
+      config:
+        - subnet: 10.148.222.0/24
+          gateway: 10.148.222.1
+          ip_range: 10.148.222.0/24
+
+services:
+  compute133:
+    extends:
+      file: compute-common-docker-compose.yml
+      service: compute
+    container_name: compute133
+    hostname: compute133
+    networks:
+      computenet:
+        ipv4_address: 10.152.223.133
+      ipminet:
+        ipv4_address: 10.148.222.249
+    volumes:
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 21G
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 12G
+            #    pids: -1
+    memswap_limit: 12G
+    shm_size: 12G
+
