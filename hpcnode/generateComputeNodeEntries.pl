@@ -45,15 +45,18 @@ networks:
           ip_range: 10.152.223.0/24
 
 services:
-  portainer-agent:
-    container_name: portainer-agent
-    image: portainer/agent
+  hawser-agent:
+    container_name: hawser-agent
+    image: ghcr.io/finsys/hawser:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /var/lib/docker/volumes:/var/lib/docker/volumes
+      - /varidata/research/admin/VAIDocker/hpcnode/hawser:/opt/hawser-stack
+    environment:
+      - STACKS_DIR=/opt/hawser-stacks
+      - TOKEN=${TOKEN}
     ports:
-      - 9001:9001
-    restart: always
+      - 2376:2376
+    restart: unless-stopped
 
 EOF
 ;
