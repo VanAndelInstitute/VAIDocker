@@ -4,7 +4,7 @@
 Cmnd_Alias POWER_MGMT_CMDS = /usr/bin/ipmitool power status, /usr/bin/ipmitool power cycle
 
 #commands to nvidia mgmt
-Cmnd_Alias NVIDIA_MGMT_CMDS = /cm/shared/apps/cuda12.5/visual-tools/12.5.1/bin/ncu
+Cmnd_Alias NVIDIA_MGMT_CMDS = /cm/shared/apps/cuda12.5/visual-tools/12.5.1/bin/ncu, /varidata/research/software/cuda/nvidia-smi *
 
 #Huilin Self manage node restarts
 Host_Alias HUILIN_NODES = compute114, compute115, compute116, compute117, compute118, compute119, compute120, compute131, compute132, compute134, compute138, compute139, compute140
@@ -21,6 +21,7 @@ Host_Alias BBC_NODES = compute086, compute087, compute088, compute097, compute11
 #yang yang Self manage node restarts
 Host_Alias YYANG_NODES = compute121, compute122, compute144, compute148, compute149
 %y.yang.lab-modify YYANG_NODES = (root) NOPASSWD: POWER_MGMT_CMDS
+%y.yang.lab-modify YYANG_NODES = (root) NOPASSWD: NVIDIA_MGMT_CMDS
 
 #jang and shen manage nvidia insight (ncu)
 Host_Alias JANG_SHEN_NODES =  compute112, compute143, compute147
